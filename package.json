@@ -7,7 +7,9 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "bunx biome lint",
-		"format": "bunx biome format --write",
+		"format": "bunx biome format",
+		"lint:write" :"bunx biome lint --write",
+		"format:write":"bunx biome format --write",
 		"prepare": "husky"
 	},
 	"dependencies": {
