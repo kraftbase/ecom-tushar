@@ -21,7 +21,7 @@ const Container = React.forwardRef<HTMLElement, Props>(
       <Comp
         id={id}
         className={cn(
-          "container-main w-full mx-auto px-2 md:px-8 xl:px-18 max-w-[95rem] relative	  ",
+          "container-main w-full mx-auto px-4 md:px-8 xl:px-18 max-w-[95rem] relative	  ",
           overflowHidden ? "overflow-x-hidden" : "",
           className
         )}

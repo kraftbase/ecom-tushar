@@ -14,6 +14,16 @@ const GlowButton = ({ text, className }: GlowButtonProps) => {
         className
       )}
     >
+      {/* <div
+          className="absolute inset-0 rounded-[10.72px] border-[1.072px] border-white/10"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(47, 40, 74, 0.00) 0%, #312899 75%)",
+            filter: "blur(32.16px)",
+            zIndex: -1,
+            opacity: "50%",
+          }}
+        /> */}
       {text}
     </Button>
   );

@@ -10,7 +10,7 @@ function FeaturesGrid() {
         {/* Top Row - 2 cards */}
 
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="bg-[#111827] rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:bg-[#00031C] bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80">
+          <div className=" rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#00031C]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80">
             <div className="relative z-30 flex flex-col items-center justify-center gap-4 p-8">
               <h3 className="text-2xl font-bold mb-2">
                 7 Spy Tools Used by the Pros
@@ -21,7 +21,7 @@ function FeaturesGrid() {
               </p>
             </div>
             <Image
-              src={"/assets/features/illustration.png"}
+              src={"/assets/features/Illustration.png"}
               alt="illustation"
               width={600}
               height={342}
@@ -29,7 +29,7 @@ function FeaturesGrid() {
             />
           </div>
 
-          <div className="bg-[#111827] rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:bg-[#00031C] bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden">
+          <div className=" rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#00031C]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden">
             <div className="relative z-30 flex flex-col items-center justify-center gap-4 p-8">
               <h3 className="text-2xl font-bold mb-2 text-center">
                 100 Handpicked Winning Products to Make You Win
@@ -41,7 +41,7 @@ function FeaturesGrid() {
               </p>
             </div>
             <Image
-              src={"/assets/features/illustration-2.png"}
+              src={"/assets/features/Illustration-2.png"}
               alt="illustation"
               width={600}
               height={342}
@@ -51,7 +51,7 @@ function FeaturesGrid() {
         </div>
 
         {/* Middle Full-Width Card */}
-        <div className="bg-[#111827] flex  rounded-2xl p-6 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+        <div className=" flex  rounded-2xl p-6 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#00031C]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
           <Image
             src={"/assets/features/Wishlist.png"}
             alt="illustation"
@@ -73,7 +73,7 @@ function FeaturesGrid() {
 
         {/* Bottom Row - 3 cards */}
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="bg-[#111827] rounded-2xl p-2 pb-44 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+          <div className=" rounded-2xl p-2 pb-44 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#00031C]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
             <div className="relative z-30 flex flex-col items-center justify-center gap-4 p-8 ">
               <h3 className="text-xl font-bold mb-2 text-center">
                 Pre-Designed Landing Pages
@@ -91,7 +91,7 @@ function FeaturesGrid() {
               className="w-3/4 z-30 absolute bottom-0 left-1/2 -translate-x-1/2"
             />
           </div>
-          <div className="bg-[#111827] rounded-2xl p-2 pb-44 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+          <div className=" rounded-2xl p-2 pb-44 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#00031C]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
             <div className="relative z-30 flex flex-col items-center justify-center gap-4 p-8 ">
               <h3 className="text-xl font-bold mb-2 text-center">
                 Handpicked Creatives
@@ -109,7 +109,7 @@ function FeaturesGrid() {
               className="w-3/4 z-30 absolute bottom-0 left-1/2 -translate-x-1/2"
             />
           </div>
-          <div className="bg-[#111827] rounded-2xl  p-2 pb-44 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+          <div className=" rounded-2xl  p-2 pb-44 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#00031C]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
             <div className="relative z-30 flex flex-col items-center justify-center gap-4 p-8 ">
               <h3 className="text-xl font-bold mb-2 text-center">
                 Launch 10x Faster
