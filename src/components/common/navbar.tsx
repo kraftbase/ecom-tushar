@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="w-full flex items-center justify-between ">
           <Logo />
 
-          <ul className="hidden lg:flex items-center justify-center text-[14px] px-3 text-foreground border border-white/10 rounded-full bg-navbar-color absolute left-1/2 -translate-x-1/2">
+          <ul className="hidden lg:flex items-center justify-center text-[14px] px-4 text-foreground border border-white/10 rounded-full bg-navbar-color absolute left-1/2 -translate-x-1/2">
             {NAVITEMS.map((item, idx) => (
               <Link
                 href={item && item.link}

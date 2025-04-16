@@ -12,8 +12,8 @@ function FAQ() {
     "relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:bg-[#00031C]/90 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]";
 
   return (
-    <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-10 gap-6 ">
-      <Accordion type="single" collapsible className="w-2/3 ">
+    <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-6 lg:py-10 gap-6 ">
+      <Accordion type="single" collapsible className="lg:w-2/3 ">
         <AccordionItem value="item-1" className={accordionItemClass}>
           <AccordionTrigger className="z-50">
             What is Dropship Mastery?
