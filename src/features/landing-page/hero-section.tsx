@@ -17,10 +17,20 @@ const HeroSection = () => {
       <Image
         src="/assets/hero/grid-bg.svg"
         alt="hero-section"
-        className="w-full h-fit absolute top-0 left-0"
+        className="hidden lg:block w-full h-fit absolute top-0 left-0"
         fill
         fetchPriority="high"
       />
+      <div className="w-full overflow-hidden">
+        <Image
+          src="/assets/hero/grid-bg.svg"
+          alt="hero-section"
+          className="lg:hidden w-[30rem] h-fit absolute bottom-24 left-0"
+          width={1500}
+          height={1500}
+          fetchPriority="high"
+        />
+      </div>
 
       <header className="relative z-10 flex flex-col items-center justify-center">
         <Badge className="text-white text-sm py-3 px-5 mb-5 font-medium  z-10 rounded-[100px] relative after:z-20 after:absolute after:inset-[.5px] after:rounded-[100px] after:bg-[#00031C] after:shadow-[inset_0px_-7px_9px_0px_rgba(255,255,255,0.05)] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
