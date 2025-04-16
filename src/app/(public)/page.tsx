@@ -8,6 +8,7 @@ import ToolsPrice from "@/features/landing-page/tools-price";
 import Testimonials from "@/features/landing-page/testimonials";
 import Pricing from "@/features/landing-page/pricing";
 import FAQ from "@/features/landing-page/faq";
+import Footer from "@/features/landing-page/footer";
 
 export default function Home() {
   return (
@@ -86,6 +87,7 @@ export default function Home() {
         description="Answers to your questions. We have got everything you need to know"
       />
       <FAQ />
+      <Footer />
     </>
   );
 }
