@@ -1,0 +1,66 @@
+import Container from "@/components/common/container";
+import Image from "next/image";
+import React from "react";
+
+function HowItWorks() {
+  return (
+    <Container className="relative overflow-visible flex justify-center items-start max-w-7xl mx-auto py-10  gap-6 ">
+      <div className=" rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:backdrop-blur-[2.91213px] after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+        <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-8 ">
+          <Image
+            src={"/assets/features/bolt.png"}
+            alt="illustation"
+            width={200}
+            height={200}
+            className=" w-10 z-30 "
+          />
+          <h3 className="text-xl font-bold mb-2 text-start">
+            Get Instant Access
+          </h3>
+          <p className="text-xl text-white/70 text-start">
+            Choose a plan and unlock premium tools, winning products, and expert
+            resources immediately.
+          </p>
+        </div>
+      </div>
+      <div className="bg-[#111827] rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+        <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-8 ">
+          <Image
+            src={"/assets/features/bolt.png"}
+            alt="illustation"
+            width={200}
+            height={200}
+            className=" w-10 z-30 "
+          />
+          <h3 className="text-xl font-bold mb-2 text-start">
+            Explore Your Dashboard
+          </h3>
+          <p className="text-xl text-white/70 text-start">
+            Navigate an easy-to-use dashboard packed with spy tools, product
+            research, landing pages, and ad creatives.
+          </p>
+        </div>
+      </div>
+      <div className="bg-[#111827] rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+        <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-8 ">
+          <Image
+            src={"/assets/features/bolt.png"}
+            alt="illustation"
+            width={200}
+            height={200}
+            className=" w-10 z-30"
+          />
+          <h3 className="text-xl font-bold mb-2 text-start">
+            Start Scaling with Ease
+          </h3>
+          <p className="text-xl text-white/70 text-start">
+            Implement ready-made assets, run winning ads, and grow your store
+            effortlessly.
+          </p>
+        </div>
+      </div>
+    </Container>
+  );
+}
+
+export default HowItWorks;

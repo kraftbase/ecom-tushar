@@ -13,13 +13,6 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleKeyDown = (e: React.KeyboardEvent, action: () => void) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      action();
-    }
-  };
-
   return (
     <Container asChild>
       <nav className={cn("absolute h-[5.5rem] flex items-center")}>
@@ -27,16 +20,16 @@ const Navbar = () => {
           <Logo />
 
           <ul className="hidden lg:flex items-center justify-center text-[14px] px-3 text-foreground border border-white/10 rounded-full bg-navbar-color absolute left-1/2 -translate-x-1/2">
-            {NAVITEMS.map((item) => (
+            {NAVITEMS.map((item, idx) => (
               <Link
-                href={item?.link}
-                key={item.label}
-                onClick={() => setActive(NAVITEMS.indexOf(item))}
+                href={item && item.link}
+                key={idx}
+                onClick={() => setActive(idx)}
               >
                 <li
                   className={cn(
-                    "cursor-pointer py-3 capitalize px-[12px] rounded-2xl hover:py-1.5  hover:activeMenu transition-all  ",
-                    active === NAVITEMS.indexOf(item) ? "active   py-1.5" : ""
+                    "cursor-pointer py-3 capitalize px-[12px] rounded-2xl hover:py-1.5  hover:activeMenu transition-all text-white/90  ",
+                    active === idx ? "active   py-1.5" : ""
                   )}
                 >
                   {item.label}
@@ -55,37 +48,32 @@ const Navbar = () => {
           </div>
 
           {/* for mobile */}
+
           {isOpen ? (
             <img
               src="/assets/home/close.svg"
-              alt="Close menu"
-              className="block lg:hidden cursor-pointer"
+              alt="hamburger"
+              className="block lg:hidden"
               onClick={() => setIsOpen(false)}
-              onKeyDown={(e) => handleKeyDown(e, () => setIsOpen(false))}
-              tabIndex={0}
-              role="button"
             />
           ) : (
             <img
-              src="/assets/home/ham.svg"
-              alt="Open menu"
-              className="block lg:hidden cursor-pointer"
+              src="/assets/navbar/ham.svg"
+              alt="hamburger"
+              className="block lg:hidden p-2 rounded-lg border"
               onClick={() => setIsOpen(true)}
-              onKeyDown={(e) => handleKeyDown(e, () => setIsOpen(true))}
-              tabIndex={0}
-              role="button"
             />
           )}
         </div>
 
-        <ul className="flex mt-6 lg:hidden flex-col items-center justify-center gap-[8px] leading-[32px] text-[24px] font-[600] text-[#27283599]  px-6  rounded-3xl   bg-transparent">
-          {NAVITEMS.map((item) => (
+        {/* <ul className="flex mt-6 lg:hidden flex-col items-center justify-center gap-[8px] leading-[32px] text-[24px] font-[600] text-[#27283599]  px-6  rounded-3xl   bg-transparent font-satoshi">
+          {NAVITEMS.map((item, idx) => (
             <li
               className={cn(
                 "cursor-pointer py-3.5 px-[12px] rounded-2xl hover:py-1.5 hover:text-black hover:activeMenu transition-all  ",
-                active === NAVITEMS.indexOf(item) ? " text-black  " : ""
+                active === idx ? " text-black  " : ""
               )}
-              key={item.label}
+              key={idx}
             >
               {item.label}
             </li>
@@ -97,7 +85,7 @@ const Navbar = () => {
               <ChevronRight width={17} />
             </Button>
           </Link>
-        </ul>
+        </ul> */}
         <div className="border-background-gradient absolute bottom-0 left-0 w-full h-px" />
       </nav>
     </Container>

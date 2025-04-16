@@ -1,10 +1,10 @@
 import Container from "@/components/common/container";
-import Image from "next/image";
+
 
 const WeWorkedWith = () => {
   return (
     <Container className="py-20">
-      <header className="text-2xl opacity-50  text-center">
+      <header className="text-[27px] opacity-50  text-center">
         Empowering scale on every ad platform
       </header>
       <main className="mt-10">
