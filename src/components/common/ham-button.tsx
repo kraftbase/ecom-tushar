@@ -4,9 +4,10 @@ import { cn } from "@/lib/utils";
 interface HamButtonProps {
   className?: string;
   onClick?: () => void;
+  isOpen?: boolean;
 }
 
-const HamButton = ({ className, onClick }: HamButtonProps) => {
+const HamButton = ({ isOpen, className, onClick }: HamButtonProps) => {
   return (
     <Button
       onClick={onClick}
@@ -25,7 +26,12 @@ const HamButton = ({ className, onClick }: HamButtonProps) => {
           opacity: "90%",
         }}
       />
-      <img src="/assets/navbar/ham.svg" alt="hamburger" className="w-6 h-6" />
+
+      <img
+        src={isOpen ? "/assets/navbar/close.svg" : "/assets/navbar/ham.svg"}
+        alt={isOpen ? "close" : "hamburger"}
+        className="w-6 h-6"
+      />
     </Button>
   );
 };

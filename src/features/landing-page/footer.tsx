@@ -1,5 +1,6 @@
 import GlowButton from "@/components/common/glow-button";
 import Particles from "@/components/common/particles";
+import { ShootingStars } from "@/components/ui/shooting-stars";
 import Image from "next/image";
 import React from "react";
 
@@ -78,19 +79,14 @@ function Footer() {
           className="absolute top-0 left-0 h-full w-full z-40 scale-[1.2]"
         />
       </div>
-      <Image
-        src="/assets/footer/line.svg"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute top-0 lg:top-40 z-30 left-0 lg:left-30 w-10 rotate-[-10.804deg]"
-      />
-      <Image
-        src="/assets/footer/line.svg"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute top-60 z-30 left-1/2 -translate-x-1/2 w-10 rotate-[-10.804deg]"
+      <ShootingStars
+        className="z-40 w-full h-full"
+        trailColor="#fff"
+        minSpeed={5}
+        maxSpeed={5}
+        starWidth={20}
+        starHeight={2}
+        starColor="#fff"
       />
 
       <div className="absolute top-0 z-30 left-0 w-full h-full rotate-[-10.804deg] object-cover">

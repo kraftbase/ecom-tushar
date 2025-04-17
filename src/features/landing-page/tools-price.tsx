@@ -3,7 +3,7 @@ import React from "react";
 
 interface Tool {
   name: string;
-  price: number;
+  price: string;
   dropship: boolean;
   showBottomBorder?: boolean;
 }
@@ -47,28 +47,53 @@ const ToolRow: React.FC<ToolRowProps> = ({ tool }) => {
 
 function ToolsPrice() {
   const tools: Tool[] = [
-    { name: "Pipiads", price: 20000, dropship: true, showBottomBorder: true },
-    { name: "Dinosaur", price: 20000, dropship: true, showBottomBorder: true },
+    { name: "Pipiads", price: "20000", dropship: true, showBottomBorder: true },
+    {
+      name: "Dinosaur",
+      price: "20000",
+      dropship: true,
+      showBottomBorder: true,
+    },
     {
       name: "Shophunter.io",
-      price: 20000,
+      price: "20000",
       dropship: true,
       showBottomBorder: true,
     },
-    { name: "FutureLib", price: 20000, dropship: true, showBottomBorder: true },
+    {
+      name: "FutureLib",
+      price: "20000",
+      dropship: true,
+      showBottomBorder: true,
+    },
     {
       name: "Winning Hunter",
-      price: 20000,
+      price: "20000",
       dropship: true,
       showBottomBorder: true,
     },
-    { name: "Chat GPT+", price: 20000, dropship: true, showBottomBorder: true },
-    { name: "Canva", price: 20000, dropship: true, showBottomBorder: true },
-    { name: "Pacdora", price: 20000, dropship: true, showBottomBorder: true },
-    { name: "Runway.ml", price: 20000, dropship: true, showBottomBorder: true },
+    {
+      name: "Chat GPT+",
+      price: "20000",
+      dropship: true,
+      showBottomBorder: true,
+    },
+    { name: "Canva", price: "20000", dropship: true, showBottomBorder: true },
+    {
+      name: "Pacdora",
+      price: "100000+",
+      dropship: true,
+      showBottomBorder: true,
+    },
+    {
+      name: "Runway.ml",
+      price: "100000+",
+      dropship: true,
+      showBottomBorder: true,
+    },
     {
       name: "Foreplay.co",
-      price: 20000,
+      price: "100000+",
       dropship: true,
       showBottomBorder: true,
     },
@@ -115,7 +140,7 @@ function ToolsPrice() {
           ))}
           {/* Total */}
           <div className="flex justify-center p-4 text-lg font-bold  mt-2">
-            92,000
+            {/* 92,000 */}
           </div>
         </div>
       </div>
