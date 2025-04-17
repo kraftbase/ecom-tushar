@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const featureCardClassName =
-  "rounded-2xl p-2 flex-1 relative border border-[#0C0F26] bg-[linear-gradient(180deg,_rgba(0,_2,_15,_0.00)_0%,_#00041F_100%)]";
+  "rounded-2xl p-2 flex-1 relative border-2 border-[#0C0F26] bg-[linear-gradient(180deg,_rgba(0,_2,_15,_0.00)_0%,_#00041F_100%)]";
 
 interface FeatureCardProps {
   title: string;
@@ -20,7 +20,7 @@ const FeatureCard = ({
 }: FeatureCardProps) => {
   return (
     <div className={className}>
-      <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-8">
+      <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8">
         <div className="flex w-full justify-between items-center gap-4">
           <Image src={src} alt="bolt" width={40} height={40} />
           <h3 className="text-xl font-medium mb-2 text-start flex-1 ">
@@ -31,7 +31,9 @@ const FeatureCard = ({
           </div>
         </div>
 
-        <p className="text-[18px]  text-white/70 text-start">{description}</p>
+        <p className="text-base lg:text-[18px]  text-white/70 text-start">
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -39,8 +41,8 @@ const FeatureCard = ({
 
 const PowerfulTools = () => {
   return (
-    <Container className="relative flex justify-center flex-col items-start max-w-7xl mx-auto pt-16 pb-10 gap-6">
-      <div className="grid grid-cols-3 gap-4 w-full">
+    <Container className="relative flex justify-center flex-col items-start max-w-7xl mx-auto pt-24 lg:pt-16 pb-10 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
         {/* First Column */}
         <FeatureCard
           title="PipiAds"
@@ -55,7 +57,7 @@ const PowerfulTools = () => {
           src="/assets/features/bolt.png"
         />
         <FeatureCard
-          title=" Shophunter.io"
+          title="Shophunter.io"
           description="Spy on competitor stores and uncover best-selling products."
           className={featureCardClassName}
           src="/assets/features/bolt.png"
@@ -81,10 +83,12 @@ const PowerfulTools = () => {
           src="/assets/features/bolt.png"
         />
 
+        {/* Third Column */}
         <FeatureCard
           title="Canva"
           description="Generate persuasive product descriptions and ad copy instantly."
-          className={`${featureCardClassName} col-start-2 row-start-3`}
+          // Apply grid placement only on large screens
+          className={`${featureCardClassName} lg:col-start-2 lg:row-start-3`}
           src="/assets/features/bolt.png"
         />
       </div>

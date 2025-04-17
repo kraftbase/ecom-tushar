@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 const HeroSection = () => {
   return (
-    <Container className="relative overflow-visible pt-20 lg:pt-36">
+    <Container className="relative overflow-x-clip pt-20 lg:pt-36">
       <Image
         src="/assets/hero/galaxy-bg.svg"
         alt="hero-section"
@@ -25,7 +25,7 @@ const HeroSection = () => {
         <Image
           src="/assets/hero/grid-bg.svg"
           alt="hero-section"
-          className="lg:hidden w-[30rem] h-fit absolute bottom-24 left-0"
+          className="lg:hidden w-[30rem] scale-150 h-fit absolute bottom-24 left-0"
           width={1500}
           height={1500}
           fetchPriority="high"
@@ -39,7 +39,7 @@ const HeroSection = () => {
             <ChevronRight className="w-4 h-4" />
           </h1>
         </Badge>
-        <h1 className="text-white text-[28px] lg:text-[3.25rem]  lg:max-w-5xl font-bold text-center -tracking-[0.4px]">
+        <h1 className="text-white text-[28px] lg:text-[3.25rem]  lg:max-w-5xl font-bold text-center -tracking-[0.4px] ">
           Find & Scale Winning <br className="lg:hidden" /> Products 10x Faster
           Without&nbsp;
           <span className="background-gradient-text-parent">

@@ -40,7 +40,7 @@ const FeaturesHeader = ({
   bottomSpacing,
 }: FeaturesHeaderProps) => {
   return (
-    <Container className="pt-20 pb-10">
+    <section className="container-main w-screen lg:w-full mx-auto px-3 md:px-8 xl:px-18 max-w-[95rem] relative lg:pt-20 pb-10 mb-10 lg:mb-0 overflow-x-clip">
       <div className="relative z-10 flex flex-col items-center justify-center">
         {mainImage && (
           <Image
@@ -60,11 +60,11 @@ const FeaturesHeader = ({
         />
         <div
           className={cn(
-            "z-30 flex justify-center items-center flex-col absolute gap-6 bottom-6",
+            "z-30 flex justify-center items-center flex-col absolute gap-1 lg:gap-6 bottom-6",
             bottomSpacing
           )}
         >
-          <div className="relative w-full flex justify-center items-center title-container">
+          <div className="relative w-full flex justify-center items-center title-container overflow-x-clip">
             <Image
               src="/assets/features/line_left.svg"
               alt="line-left"
@@ -74,7 +74,7 @@ const FeaturesHeader = ({
             />
             <h1
               className={cn(
-                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-base font-normal leading-6",
+                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-sm lg:text-base font-normal leading-6",
                 title.className
               )}
             >
@@ -89,7 +89,7 @@ const FeaturesHeader = ({
             />
           </div>
           {topContent && (
-            <div className="relative w-40 gap-2 flex justify-start items-center border border-[#1F275F] rounded-full overflow-hidden p-1">
+            <div className="relative w-40 gap-2 flex justify-start items-center border border-[#1F275F] rounded-full overflow-hidden lg:p-1">
               {[1, 2, 3, 4, 5].map((num) => (
                 <Image
                   key={num}
@@ -101,15 +101,20 @@ const FeaturesHeader = ({
               ))}
             </div>
           )}
-          <h1 className={cn("text-5xl font-bold ", headingClassName)}>
+          <h1
+            className={cn(
+              "text-[22px] lg:text-5xl font-bold ",
+              headingClassName
+            )}
+          >
             {heading}
           </h1>
-          <h1 className="text-center text-[#CAC9D1] text-lg font-normal max-w-xl">
+          <h1 className="text-center text-[#CAC9D1] text-base lg:text-lg font-normal max-w-xl">
             {description}
           </h1>
         </div>
       </div>
-    </Container>
+    </section>
   );
 };
 

@@ -116,7 +116,7 @@ function Pricing() {
 
   return (
     <>
-      <div className="relative z-10 flex flex-col items-center justify-center mt-32">
+      <div className="relative z-10 flex flex-col items-center justify-center mt-24 lg:mt-32 h-full">
         <div className="relative h-full w-full overflow-hidden">
           <Image
             src="/assets/pricing/grid.svg"
@@ -139,10 +139,10 @@ function Pricing() {
 
         <div
           className={cn(
-            "z-30 flex justify-center items-center flex-col absolute gap-6 bottom-6"
+            "z-30 flex justify-center items-center flex-col absolute gap-2 lg:gap-6 -bottom-32 lg:bottom-6"
           )}
         >
-          <div className="relative w-full flex justify-center items-center title-container">
+          <div className="relative w-full flex justify-center items-center title-container overflow-x-clip">
             <Image
               src="/assets/features/line_left.svg"
               alt="line-left"
@@ -166,18 +166,18 @@ function Pricing() {
             />
           </div>
 
-          <h1 className="text-5xl font-bold">
+          <h1 className=" text-[22px] lg:text-5xl font-bold ">
             Get Instant Access To <br />
             Beat The Competition.
           </h1>
-          <h1 className="text-center text-[#CAC9D1] text-lg font-normal max-w-xl">
-            Get full access to powerful tools with a simple, all-in-one pricing
-            plan.
+          <h1 className="text-center text-[#CAC9D1] text-base  lg:text-lg font-normal max-w-xl ">
+            Get full access to powerful tools with a simple,{" "}
+            <br className="lg:hidden" /> all-in-one pricing plan.
           </h1>
         </div>
       </div>
-      <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-10 gap-6">
-        <div className="flex gap-8 w-full justify-center">
+      <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-40 lg:py-10 gap-6">
+        <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
           <PricingCard
             title="1 month"
             price="₹2,999"

@@ -1,15 +1,14 @@
 import Container from "@/components/common/container";
 
-
 const WeWorkedWith = () => {
   return (
     <Container className="py-20">
-      <header className="text-[27px] opacity-50  text-center">
+      <header className="text-[16px] lg:text-[27px] opacity-50  text-center">
         Empowering scale on every ad platform
       </header>
-      <main className="mt-10">
+      <main className="mt-10 overflow-hidden">
         {/* grid */}
-        <div className="flex justify-center relative w-fit mx-auto items-center gap-12">
+        <div className="flex justify-center relative w-screen lg:w-fit mx-auto items-center gap-12">
           {/* grid item */}
           <div className="mask-gradient w-1/3  h-full absolute top-0 left-0 " />
           <img src="/assets/companies/logo.svg" alt="Company logo" />

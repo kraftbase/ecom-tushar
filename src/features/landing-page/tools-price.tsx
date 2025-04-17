@@ -69,8 +69,8 @@ function ToolsPrice() {
   // Calculate total
 
   return (
-    <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-10 gap-6">
-      <div className="rounded-2xl p-2 w-2/4 max-w-3xl flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:bg-[#00031C]/90 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+    <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-12 lg:py-10 gap-6">
+      <div className="rounded-2xl p-2 w-full lg:w-2/4 max-w-3xl flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:bg-[#00031C]/90 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
         <div
           className="absolute inset-0 rounded-[10.72px] border-[1.072px] border-white/10"
           style={{
@@ -81,7 +81,7 @@ function ToolsPrice() {
             opacity: "50%",
           }}
         />
-        <div className="w-full z-50 relative rounded-lg py-10 px-12">
+        <div className="w-full z-50 relative rounded-lg py-6 lg:py-10 px-2 lg:px-12">
           <div
             className={`flex items-center justify-between py-4 w-full 
       `}

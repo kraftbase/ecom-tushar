@@ -24,6 +24,7 @@ export default function Home() {
         title={{ text: "Features" }}
         heading="No Guesswork. Just Pure Scale."
         description="Get access to top ecommerce tools & apps, winning products, pre-made landers & creatives."
+        bottomSpacing="-bottom-10 lg:bottom-6 "
       />
       <FeaturesGrid />
       <FeaturesHeader
@@ -36,6 +37,7 @@ export default function Home() {
         title={{ text: "Process" }}
         heading="How it works."
         description="Effortlessly access premium tools, launch winning products, and scale your store with ease."
+        bottomSpacing="-bottom-20 lg:bottom-6 "
       />
       <HowItWorks />
       <FeaturesHeader
@@ -45,9 +47,10 @@ export default function Home() {
           alt: "features-header",
         }}
         topContent={true}
-        bottomSpacing="-bottom-10"
+        bottomSpacing="-bottom-32 lg:bottom-10 "
         title={{ text: "Features" }}
         heading="Powerful Spy Tools to Fuel Your Success"
+        headingClassName="text-center lg:text-left"
         description="Power-packed tools to find, validate, and scale winning products effortlessly."
       />
       <PowerfulTools />
@@ -60,6 +63,8 @@ export default function Home() {
         }}
         title={{ text: "Features" }}
         heading="Powerful Spy Tools to Fuel Your Success"
+        bottomSpacing="-bottom-24 lg:bottom-10 "
+        headingClassName="text-center lg:text-left"
         description="Power-packed tools to find, validate, and scale winning products effortlessly."
       />
       <ToolsPrice />
@@ -73,6 +78,8 @@ export default function Home() {
         title={{ text: "Testimonials" }}
         heading="Here's What The Community is Saying"
         description="Real reviews from real users."
+        headingClassName="text-center lg:text-left"
+        bottomSpacing="-bottom-10 lg:bottom-6 "
       />
       <Testimonials />
       <Pricing />
@@ -85,6 +92,7 @@ export default function Home() {
         title={{ text: "FAQ" }}
         heading="Have Questions?"
         description="Answers to your questions. We have got everything you need to know"
+        bottomSpacing="-bottom-10 lg:bottom-6 "
       />
       <FAQ />
       <Footer />
