@@ -64,6 +64,14 @@ function ToolsPrice() {
     },
     { name: "Chat GPT+", price: 20000, dropship: true, showBottomBorder: true },
     { name: "Canva", price: 20000, dropship: true, showBottomBorder: true },
+    { name: "Pacdora", price: 20000, dropship: true, showBottomBorder: true },
+    { name: "Runway.ml", price: 20000, dropship: true, showBottomBorder: true },
+    {
+      name: "Foreplay.co",
+      price: 20000,
+      dropship: true,
+      showBottomBorder: true,
+    },
   ];
 
   // Calculate total

@@ -49,7 +49,7 @@ export default function Home() {
         topContent={true}
         bottomSpacing="-bottom-32 lg:bottom-10 "
         title={{ text: "Features" }}
-        heading="Powerful Spy Tools to Fuel Your Success"
+        heading="Powerful Tools to Fuel Your Success"
         headingClassName="text-center lg:text-left"
         description="Power-packed tools to find, validate, and scale winning products effortlessly."
       />

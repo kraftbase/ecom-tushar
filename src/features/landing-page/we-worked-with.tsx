@@ -1,4 +1,5 @@
 import Container from "@/components/common/container";
+import Marquee from "@/components/Marque/Marque";
 
 const WeWorkedWith = () => {
   return (
@@ -11,10 +12,19 @@ const WeWorkedWith = () => {
         <div className="flex justify-center relative w-screen lg:w-fit mx-auto items-center gap-12">
           {/* grid item */}
           <div className="mask-gradient w-1/3  h-full absolute top-0 left-0 " />
+
+          <Marquee
+            images={[
+              "/assets/companies/logo.svg",
+              "/assets/companies/youtube.png",
+              "/assets/companies/facebook.png",
+              "/assets/companies/linkedin.png",
+            ]}
+          />
+          {/* <img src="/assets/companies/logo.svg" alt="Company logo" />
           <img src="/assets/companies/logo.svg" alt="Company logo" />
           <img src="/assets/companies/logo.svg" alt="Company logo" />
-          <img src="/assets/companies/logo.svg" alt="Company logo" />
-          <img src="/assets/companies/logo.svg" alt="Company logo" />
+          <img src="/assets/companies/logo.svg" alt="Company logo" /> */}
           <div className="mask-gradient w-1/3 rotate-180 h-full absolute top-0 right-0 " />
         </div>
       </main>
