@@ -3,36 +3,50 @@ import Container from "@/components/common/container";
 import GlowButton from "@/components/common/glow-button";
 import Image from "next/image";
 import React from "react";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
+import sevenSpy from "../../../public/assets/lottie_animations/features/seven_spy.json";
+import hundredHandpicked from "../../../public/assets/lottie_animations/features/hundred_handpicked.json";
+import premadeProduct from "../../../public/assets/lottie_animations/features/Pre-made_product_pages.json";
+import preDesigned from "../../../public/assets/lottie_animations/features/pre_designed_landing_pages.json";
+import LauchTenX from "../../../public/assets/lottie_animations/features/launch_10x_faster.json";
+import handpickedCreatives from "../../../public/assets/lottie_animations/features/handpicked_creatives.json";
+import dynamic from "next/dynamic";
 
 function FeaturesGrid() {
   return (
-    <Container className="relative overflow-visible flex flex-col justify-center items-center ">
+    <Container className="relative overflow-visible flex flex-col justify-center items-center font-satoshi ">
       <div className="max-w-6xl mx-auto flex flex-col gap-6 py-10">
         {/* Top Row - 2 cards */}
 
         <div className="flex flex-col md:flex-row gap-6">
           <div className=" rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80">
-            <div className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-8">
+            <div className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
               <h3 className="text-lg lg:text-2xl font-bold mb-2">
-                7 Spy Tools Used by the Pros
+                10 Spy Tools Used by the Pros
               </h3>
-              <p className="text-sm lg:text-xl text-white/70 text-center">
+              <p className="text-sm lg:text-xl text-white/70 text-center font-normal">
                 Find winning products, analyze top stores, and uncover ad
                 strategies in seconds.
               </p>
             </div>
 
-            <Image
+            {/* <Image
               src={"/assets/features/Illustration.png"}
               alt="illustation"
               width={600}
               height={342}
               className="w-full lg:w-3/4 absolute bottom-0 left-1/2 -translate-x-1/2 z-40"
+            /> */}
+            <Lottie
+              animationData={sevenSpy}
+              loop={true}
+              className="w-[98%] rounded-2xl lg:rounded-none lg:w-3/4 absolute bottom-[1.2px] left-1/2 -translate-x-1/2 z-30"
             />
           </div>
 
           <div className=" rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80">
-            <div className="relative z-30 flex flex-col items-center justify-center gap-4 lg:p-8">
+            <div className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
               <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
                 100 Handpicked Winning Products to Make You Win
               </h3>
@@ -42,26 +56,36 @@ function FeaturesGrid() {
                 the competition.
               </p>
             </div>
-            <Image
+            {/* <Image
               src={"/assets/features/Illustration-2.png"}
               alt="illustation"
               width={600}
               height={342}
               className="w-full lg:w-3/4 z-30 absolute bottom-0 left-1/2 -translate-x-1/2"
+            /> */}
+            <Lottie
+              animationData={hundredHandpicked}
+              loop={true}
+              className="w-[98%] rounded-2xl lg:rounded-none lg:w-3/4 absolute bottom-[1.2px] left-1/2 -translate-x-1/2 z-30"
             />
           </div>
         </div>
 
         {/* Middle Full-Width Card */}
         <div className=" flex flex-col lg:flex-row justify-center items-center  rounded-2xl p-2 lg:p-6 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
-          <Image
+          {/* <Image
             src={"/assets/features/Wishlist.png"}
             alt="illustation"
             width={600}
             height={342}
             className="z-40 order-2 lg:order-1 flex-1"
+          /> */}
+          <Lottie
+            animationData={premadeProduct}
+            loop={true}
+            className="z-30 order-2 lg:order-1 flex-1"
           />
-          <div className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 order-1 lg:order-2 flex-1 ">
+          <div className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 order-1 lg:order-2 flex-1 ">
             <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
               Pre-Made Product Pages & Creatives. Launch 10x Faster.
             </h3>
@@ -76,7 +100,7 @@ function FeaturesGrid() {
         {/* Bottom Row - 3 cards */}
         <div className="flex flex-col md:flex-row gap-6">
           <div className=" rounded-2xl p-2 pb-60 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
-            <div className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
+            <div className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
                 Pre-Designed Landing Pages
               </h3>
@@ -85,12 +109,17 @@ function FeaturesGrid() {
                 copy, paste, and launch.
               </p>
             </div>
-            <Image
+            {/* <Image
               src={"/assets/features/illustration-3.png"}
               alt="illustation"
               width={600}
               height={342}
               className="w-3/4 z-30 absolute bottom-0 left-1/2 -translate-x-1/2"
+            /> */}
+            <Lottie
+              animationData={preDesigned}
+              loop={true}
+              className="rounded-2xl lg:rounded-none w-3/4 absolute bottom-[1.2px] left-1/2 -translate-x-1/2 z-30"
             />
           </div>
           <div className=" rounded-2xl p-2 pb-60 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
@@ -103,12 +132,17 @@ function FeaturesGrid() {
                 launch ads instantly.
               </p>
             </div>
-            <Image
+            {/* <Image
               src={"/assets/features/QR code.png"}
               alt="illustation"
               width={600}
               height={342}
               className="w-full z-30 absolute bottom-0 left-1/2 -translate-x-1/2"
+            /> */}
+            <Lottie
+              animationData={handpickedCreatives}
+              loop={true}
+              className="w-full z-30 absolute -bottom-10 left-1/2 -translate-x-1/2"
             />
           </div>
           <div className=" rounded-2xl  p-2 pb-60 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
@@ -121,19 +155,24 @@ function FeaturesGrid() {
                 within minutes, not weeks.
               </p>
             </div>
-            <Image
+            {/* <Image
               src={"/assets/features/Lightning Bolt.png"}
               alt="illustation"
               width={600}
               height={342}
               className="w-full z-30 absolute bottom-0 left-1/2 -translate-x-1/2"
+            /> */}
+            <Lottie
+              animationData={LauchTenX}
+              loop={true}
+              className="w-full z-30 absolute -bottom-10 left-1/2 -translate-x-1/2"
             />
           </div>
         </div>
       </div>
       <GlowButton
         text="Get Access"
-        className="my-10 text-base cursor-pointer"
+        className="my-10 text-base cursor-pointer px-8 py-6"
       />
     </Container>
   );

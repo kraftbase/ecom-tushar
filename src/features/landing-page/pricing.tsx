@@ -182,7 +182,7 @@ function Pricing() {
             title="1 month"
             price="₹2,999"
             features={[
-              "7 tools worth ₹60,000/mo",
+              "10 tools worth ₹60,000/mo",
               "Access to Protools (₹23K/mo)",
               "100 new winning products/mo",
               "Validated winning products",
@@ -198,7 +198,7 @@ function Pricing() {
             title="6 month"
             price="₹2,999"
             features={[
-              "7 tools worth ₹60,000/mo",
+              "10 tools worth ₹60,000/mo",
               "Access to Protools (₹23K/mo)",
               "100 new winning products/mo",
               "Validated winning products",
@@ -212,7 +212,7 @@ function Pricing() {
             title="12 month"
             price="₹2,999"
             features={[
-              "7 tools worth ₹60,000/mo",
+              "10 tools worth ₹60,000/mo",
               "Access to Protools (₹23K/mo)",
               "100 new winning products/mo",
               "Validated winning products",

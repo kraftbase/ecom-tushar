@@ -20,7 +20,7 @@ const FeatureCard = ({
 }: FeatureCardProps) => {
   return (
     <div className={className}>
-      <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8">
+      <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
         <div className="flex w-full justify-between items-center gap-4">
           <Image src={src} alt="bolt" width={40} height={40} />
           <h3 className="text-xl font-medium mb-2 text-start flex-1 ">
@@ -41,7 +41,7 @@ const FeatureCard = ({
 
 const PowerfulTools = () => {
   return (
-    <Container className="relative flex justify-center flex-col items-start max-w-7xl mx-auto pt-24 lg:pt-16 pb-10 gap-6">
+    <Container className="relative flex justify-center flex-col items-start max-w-7xl mx-auto pt-24 lg:pt-16 pb-10 gap-6 ">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
         {/* First Column */}
         <FeatureCard
@@ -83,12 +83,31 @@ const PowerfulTools = () => {
           src="/assets/features/bolt.png"
         />
 
+        <FeatureCard
+          title="Foreplay.co"
+          description="Uncovers hidden opportunities, empowering brands to innovate smarter and faster."
+          className={featureCardClassName}
+          src="/assets/features/bolt.png"
+        />
+        <FeatureCard
+          title="Runway.ml"
+          description="Transforms ideas into visuals, videos, and multimedia, instantly bringing imagination to life"
+          className={featureCardClassName}
+          src="/assets/features/bolt.png"
+        />
+        <FeatureCard
+          title="Pacdora"
+          description="Turns concepts into shelf-ready visuals, optimizing aesthetics and efficiency to help brands stand out."
+          className={featureCardClassName}
+          src="/assets/features/bolt.png"
+        />
+
         {/* Third Column */}
         <FeatureCard
           title="Canva"
           description="Generate persuasive product descriptions and ad copy instantly."
           // Apply grid placement only on large screens
-          className={`${featureCardClassName} lg:col-start-2 lg:row-start-3`}
+          className={`${featureCardClassName} lg:col-start-2 lg:col-span-1`}
           src="/assets/features/bolt.png"
         />
       </div>

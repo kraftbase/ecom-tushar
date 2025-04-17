@@ -62,8 +62,8 @@ const HeroSection = () => {
         </Button>
       </header>
 
-      <div className="relative">
-        <main className="relative z-10 flex flex-col items-center justify-center p-1 lg:p-4 rounded-sm lg:rounded-[14px] video-gradient-background aspect-[12/6]">
+      <div className="relative flex flex-col items-center justify-center">
+        <main className="relative z-10 flex flex-col items-center justify-center p-1 lg:p-4 rounded-sm lg:rounded-[14px] video-gradient-background aspect-[12/6] w-full lg:w-[90%]">
           <div className="flex flex-col items-center justify-center rounded-sm  bg-black w-full h-full" />
         </main>
 
