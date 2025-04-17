@@ -12,6 +12,7 @@ interface PricingCardProps {
   isPopular?: boolean;
   originalPrice: string;
   discountLabel?: string;
+  href: string;
 }
 
 function Pricing() {
@@ -22,13 +23,13 @@ function Pricing() {
     originalPrice,
     discountLabel,
     isPopular = false,
+    href,
   }: PricingCardProps) => {
     return (
       <div
         className={cn(
           "relative flex flex-col  p-8 rounded-2xl border border-[#959EFE]/20 overflow-hidden flex-1",
-          isPopular &&
-            " relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:backdrop-blur-[2.91213px] after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] "
+          "hover:relative hover:after:z-20 hover:after:absolute hover:after:inset-[.99px] hover:after:rounded-2xl hover:after:backdrop-blur-[2.91213px] hover:after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] hover:bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] transition-all duration-500"
         )}
       >
         <Image
@@ -94,9 +95,10 @@ function Pricing() {
 
           <GlowButton
             text="Get Started"
+            href={href}
             className={cn(
-              "w-full text-base py-[30px] rounded-2xl",
-              isPopular ? "" : "grayscale"
+              "w-full z-50 text-base py-[30px] rounded-2xl grayscale",
+              "hover:grayscale-0"
             )}
           />
           {/* <button
@@ -116,7 +118,10 @@ function Pricing() {
 
   return (
     <>
-      <div className="relative z-10 flex flex-col items-center justify-center mt-24 lg:mt-32 h-full">
+      <div
+        className="relative z-10 flex flex-col items-center justify-center mt-24 lg:mt-32 h-full"
+        id="pricing"
+      >
         <div className="relative h-full w-full overflow-hidden">
           <Image
             src="/assets/pricing/grid.svg"
@@ -190,9 +195,10 @@ function Pricing() {
               "Ready-to-use video creatives",
               "Get supplier details",
             ]}
-            originalPrice="40000"
+            originalPrice="40,000"
             isPopular
             discountLabel="15% off"
+            href="https://courses.ecomtushar.com/offers/53SYwTzo/checkout"
           />
           <PricingCard
             title="6 month"
@@ -206,7 +212,8 @@ function Pricing() {
               "Ready-to-use video creatives",
               "Get supplier details",
             ]}
-            originalPrice="4000"
+            originalPrice="40,000"
+            href="https://courses.ecomtushar.com/offers/6doCApEH/checkout"
           />
           <PricingCard
             title="12 month"
@@ -220,7 +227,8 @@ function Pricing() {
               "Ready-to-use video creatives",
               "Get supplier details",
             ]}
-            originalPrice="4000"
+            originalPrice="40,000"
+            href="https://courses.ecomtushar.com/offers/HFpFEJra/checkout"
           />
         </div>
       </Container>

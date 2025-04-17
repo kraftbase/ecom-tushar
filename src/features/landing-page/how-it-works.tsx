@@ -3,9 +3,12 @@ import Image from "next/image";
 import React from "react";
 
 function HowItWorks() {
+  const commonCardClasses =
+    "rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] hover:after:backdrop-blur-[2.91213px] hover:after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] transition-all duration-300";
+
   return (
-    <Container className="relative overflow-visible flex flex-col lg:flex-row justify-center items-start max-w-7xl mx-auto py-10  gap-6 ">
-      <div className=" rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl after:backdrop-blur-[2.91213px] after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+    <Container className="relative overflow-visible flex flex-col lg:flex-row justify-center items-center  max-w-7xl mx-auto py-10  gap-6 ">
+      <div className={commonCardClasses}>
         <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
           <Image
             src={"/assets/features/bolt.png"}
@@ -23,7 +26,7 @@ function HowItWorks() {
           </p>
         </div>
       </div>
-      <div className="bg-[#111827] rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+      <div className={commonCardClasses}>
         <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
           <Image
             src={"/assets/features/bolt.png"}
@@ -41,7 +44,7 @@ function HowItWorks() {
           </p>
         </div>
       </div>
-      <div className="bg-[#111827] rounded-2xl p-2 flex-1 relative after:z-20 after:absolute after:inset-[.99px] after:rounded-2xl  after:bg-[#00031C] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+      <div className={commonCardClasses}>
         <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
           <Image
             src={"/assets/features/bolt.png"}

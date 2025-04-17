@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import Container from "./container";
 import Logo from "./logo";
 import GlowButton from "./glow-button";
+import HamButton from "./ham-button";
 
 const Navbar = () => {
   const [active, setActive] = useState(0);
@@ -42,9 +43,8 @@ const Navbar = () => {
             <Link href="/login" className="text-sm font-medium">
               Login
             </Link>
-            <Link href="#footer">
-              <GlowButton text="START FREE TRIAL" />
-            </Link>
+
+            <GlowButton text="START FREE TRIAL" href="#pricing" />
           </div>
 
           {/* for mobile */}
@@ -57,12 +57,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             />
           ) : (
-            <img
-              src="/assets/navbar/ham.svg"
-              alt="hamburger"
-              className="block lg:hidden p-2 rounded-lg border"
-              onClick={() => setIsOpen(true)}
-            />
+            <HamButton onClick={() => setIsOpen(true)} className="lg:hidden" />
+            // <img
+            //   src="/assets/navbar/ham.svg"
+            //   alt="hamburger"
+            //   className="block lg:hidden p-2 rounded-lg border"
+            //   onClick={() => setIsOpen(true)}
+            // />
           )}
         </div>
 
