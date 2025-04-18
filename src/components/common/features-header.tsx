@@ -105,16 +105,7 @@ const FeaturesHeader = ({
             />
           </div>
           {topContent && (
-            <div className="relative w-40 gap-2 flex justify-start items-center border border-[#1F275F] rounded-full overflow-hidden lg:p-1">
-              {/* {[1, 2, 3, 4, 5].map((num) => (
-                <Image
-                  key={num}
-                  src={"/assets/features/icon.png"}
-                  alt="icon"
-                  width={50}
-                  height={50}
-                />
-              ))} */}
+            <div className="relative w-40 gap-2 flex justify-start items-center border border-[#1F275F] rounded-full overflow-hidden lg:py-1">
               <Marquee
                 icons={true}
                 className="w-fit h-fit"
