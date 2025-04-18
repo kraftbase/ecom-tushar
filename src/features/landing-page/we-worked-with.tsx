@@ -11,7 +11,7 @@ const WeWorkedWith = () => {
         {/* grid */}
         <div className="flex justify-center relative w-screen lg:w-fit mx-auto items-center gap-12">
           {/* grid item */}
-          <div className="mask-gradient w-1/3  h-full absolute top-0 left-0 " />
+          <div className="mask-gradient w-1/3  h-full absolute top-0 left-0 z-40" />
 
           <Marquee
             images={[
@@ -19,12 +19,11 @@ const WeWorkedWith = () => {
               "/assets/companies/youtube.png",
               "/assets/companies/facebook.png",
               "/assets/companies/linkedin.png",
+              "/assets/companies/facebook.png",
+              "/assets/companies/facebook.png",
             ]}
           />
-          {/* <img src="/assets/companies/logo.svg" alt="Company logo" />
-          <img src="/assets/companies/logo.svg" alt="Company logo" />
-          <img src="/assets/companies/logo.svg" alt="Company logo" />
-          <img src="/assets/companies/logo.svg" alt="Company logo" /> */}
+
           <div className="mask-gradient w-1/3 rotate-180 h-full absolute top-0 right-0 " />
         </div>
       </main>

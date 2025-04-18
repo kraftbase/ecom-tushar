@@ -1,4 +1,5 @@
 import Container from "@/components/common/container";
+import Particles from "@/components/common/particles";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
@@ -6,26 +7,33 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <Container className="relative overflow-x-clip pt-20 lg:pt-36">
-      <Image
-        src="/assets/hero/galaxy-bg.svg"
-        alt="hero-section"
-        className="w-full h-full absolute top-0 left-0"
-        width={1000}
-        height={1000}
-        fetchPriority="high"
-      />
+      <div className="w-full h-full absolute top-0 left-0">
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={150}
+          particleSpread={10}
+          speed={0.3}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={true}
+        />
+      </div>
+
       <Image
         src="/assets/hero/grid-bg.svg"
         alt="hero-section"
-        className="hidden lg:block w-full h-fit absolute top-0 left-0"
+        className="hidden md:block w-full h-fit absolute top-0 left-0 "
         fill
         fetchPriority="high"
       />
+      <div className="mask-gradient w-1/5 2xl:w-2/5 rotate-180 h-full absolute top-0 right-0 " />
+      <div className="mask-gradient w-1/5 2xl:w-2/5  h-full absolute top-0 left-0 " />
       <div className="w-full overflow-hidden">
         <Image
           src="/assets/hero/grid-bg.svg"
           alt="hero-section"
-          className="lg:hidden w-[30rem] scale-150 h-fit absolute bottom-24 left-0"
+          className="md:hidden w-[30rem] scale-150 h-fit absolute bottom-24 left-0"
           width={1500}
           height={1500}
           fetchPriority="high"
@@ -39,11 +47,19 @@ const HeroSection = () => {
             <ChevronRight className="w-4 h-4" />
           </h1>
         </Badge>
-        <h1 className="text-white text-[28px] lg:text-[3.25rem]  lg:max-w-5xl font-bold text-center -tracking-[0.4px] ">
-          Find & Scale Winning <br className="lg:hidden" /> Products 10x Faster
-          Without&nbsp;
-          <span className="background-gradient-text-parent">
-            <span className="background-gradient-text">Relying on Luck.</span>
+        <h1 className="text-white text-[26px] lg:text-[3.25rem]  lg:max-w-5xl font-bold text-center -tracking-[0.4px] ">
+          <span>
+            Find & Scale Winning <br className="md:hidden" />
+          </span>{" "}
+          <span>
+            Products 10x Faster <br className="md:hidden" />
+          </span>
+          <span className="text-nowrap">
+            {" "}
+            Without&nbsp;
+            <span className="background-gradient-text-parent">
+              <span className="background-gradient-text">Relying on Luck.</span>
+            </span>
           </span>
         </h1>
         <p className="text-[#efedfd]/70 font-normal font-satoshi text-center  lg:text-lg max-w-4xl opacity-80 mt-4">

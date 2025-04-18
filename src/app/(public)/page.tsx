@@ -16,19 +16,18 @@ export default function Home() {
       <HeroSection />
       <WeWorkedWith />
       <FeaturesHeader
-        backgroundImage={{ src: "/image.png", alt: "background" }}
         mainImage={{
           src: "/assets/features/features-header.svg",
           alt: "features-header",
         }}
         title={{ text: "Features" }}
         heading="No Guesswork. Just Pure Scale."
+        headingClassName="text-center lg:text-left"
         description="Get access to top ecommerce tools & apps, winning products, pre-made landers & creatives."
-        bottomSpacing="-bottom-10 lg:bottom-6 "
+        bottomSpacing="-bottom-10 md:bottom-6  "
       />
       <FeaturesGrid />
       <FeaturesHeader
-        backgroundImage={{ src: "/image.png", alt: "background" }}
         mainImage={{
           src: "/assets/features/features_two.png",
           alt: "features-header",
@@ -37,17 +36,16 @@ export default function Home() {
         title={{ text: "Process" }}
         heading="How it works."
         description="Effortlessly access premium tools, launch winning products, and scale your store with ease."
-        bottomSpacing="-bottom-20 lg:bottom-6 "
+        bottomSpacing="-bottom-20 md:bottom-6 "
       />
       <HowItWorks />
       <FeaturesHeader
-        backgroundImage={{ src: "/image.png", alt: "background" }}
         mainImage={{
           src: "/assets/features/features_two.png",
           alt: "features-header",
         }}
         topContent={true}
-        bottomSpacing="-bottom-32 lg:bottom-10 "
+        bottomSpacing="-bottom-32 md:bottom-10  "
         title={{ text: "Features" }}
         heading="Powerful Tools to Fuel Your Success"
         headingClassName="text-center lg:text-left"
@@ -55,7 +53,6 @@ export default function Home() {
       />
       <PowerfulTools />
       <FeaturesHeader
-        backgroundImage={{ src: "/image.png", alt: "background" }}
         mainImage={{
           src: "/assets/features/features_two.png",
           alt: "features-header",
@@ -63,13 +60,12 @@ export default function Home() {
         }}
         title={{ text: "Features" }}
         heading="Powerful Spy Tools to Fuel Your Success"
-        bottomSpacing="-bottom-24 lg:bottom-10 "
+        bottomSpacing="-bottom-24 md:bottom-10 "
         headingClassName="text-center lg:text-left"
         description="Power-packed tools to find, validate, and scale winning products effortlessly."
       />
       <ToolsPrice />
       <FeaturesHeader
-        backgroundImage={{ src: "/image.png", alt: "background" }}
         mainImage={{
           src: "/assets/features/features_three.png",
           alt: "features-header",
@@ -79,12 +75,11 @@ export default function Home() {
         heading="Here's What The Community is Saying"
         description="Real reviews from real users."
         headingClassName="text-center lg:text-left"
-        bottomSpacing="-bottom-10 lg:bottom-6 "
+        bottomSpacing="-bottom-10 md:bottom-6 "
       />
       <Testimonials />
       <Pricing />
       <FeaturesHeader
-        backgroundImage={{ src: "/image.png", alt: "background" }}
         mainImage={{
           src: "/assets/features/features-header.svg",
           alt: "features-header",
@@ -92,7 +87,7 @@ export default function Home() {
         title={{ text: "FAQ" }}
         heading="Have Questions?"
         description="Answers to your questions. We have got everything you need to know"
-        bottomSpacing="-bottom-10 lg:bottom-6 "
+        bottomSpacing="-bottom-10 md:bottom-6 "
       />
       <FAQ />
       <Footer />

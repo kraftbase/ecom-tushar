@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Container from "./container";
 import { cn } from "@/lib/utils";
+import Particles from "./particles";
 
 interface FeaturesHeaderProps {
   mainImage?: {
@@ -9,13 +9,7 @@ interface FeaturesHeaderProps {
     width?: number;
     height?: number;
   };
-  backgroundImage: {
-    src: string;
-    alt: string;
-    className?: string;
-    width?: number;
-    height?: number;
-  };
+
   title: {
     text: string;
     className?: string;
@@ -30,7 +24,7 @@ interface FeaturesHeaderProps {
 
 const FeaturesHeader = ({
   mainImage,
-  backgroundImage,
+
   title,
   heading,
   description,
@@ -51,13 +45,27 @@ const FeaturesHeader = ({
           />
         )}
 
-        <Image
+        <div className="w-full lg:w-2/3 h-full absolute top-0 left-1/2 -translate-x-1/2 z-10">
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={100}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={true}
+            sizeRandomness={0}
+          />
+        </div>
+
+        {/* <Image
           src={backgroundImage.src}
           alt={backgroundImage.alt}
           width={backgroundImage.width || 600}
           height={backgroundImage.height || 342}
           className="absolute"
-        />
+        /> */}
         <div
           className={cn(
             "z-30 flex justify-center items-center flex-col absolute gap-1 lg:gap-6 bottom-6",
@@ -70,14 +78,16 @@ const FeaturesHeader = ({
               alt="line-left"
               width={400}
               height={200}
-              className=" relative top-4 "
+              className=" relative top-4 md:top-5 "
             />
             <h1
               className={cn(
-                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-sm lg:text-base font-normal leading-6",
+                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-sm lg:text-base font-normal leading-6 relative",
                 title.className
               )}
             >
+              <span className="absolute w-2 h-2 bg-[#4F60FA] rounded-full left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 blur-[2px]" />
+              <span className="absolute w-2 h-2 bg-[#4F60FA] rounded-full right-0 top-1/2 -translate-y-1/2 translate-x-1/2 blur-[2px]" />
               {title.text}
             </h1>
             <Image
@@ -85,7 +95,7 @@ const FeaturesHeader = ({
               alt="line-right"
               width={400}
               height={200}
-              className=" relative top-4 "
+              className=" relative  top-4 md:top-5"
             />
           </div>
           {topContent && (

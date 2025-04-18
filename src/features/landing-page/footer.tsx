@@ -1,4 +1,6 @@
 import GlowButton from "@/components/common/glow-button";
+import Particles from "@/components/common/particles";
+import { ShootingStars } from "@/components/ui/shooting-stars";
 import Image from "next/image";
 import React from "react";
 
@@ -19,6 +21,7 @@ function Footer() {
         <GlowButton
           text="Start Scaling"
           className="w-60 lg:w-[33rem] mt-8 text-base lg:text-xl h-12 lg:h-16"
+          href="/#pricing"
         />
       </div>
       <div className="w-full py-4  z-50  absolute bottom-0 flex justify-center items-center ">
@@ -76,29 +79,30 @@ function Footer() {
           className="absolute top-0 left-0 h-full w-full z-40 scale-[1.2]"
         />
       </div>
-      <Image
-        src="/assets/footer/line.svg"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute top-0 lg:top-40 z-30 left-0 lg:left-30 w-10 rotate-[-10.804deg]"
-      />
-      <Image
-        src="/assets/footer/line.svg"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute top-60 z-30 left-1/2 -translate-x-1/2 w-10 rotate-[-10.804deg]"
+      <ShootingStars
+        className="z-40 w-full h-full"
+        trailColor="#fff"
+        minSpeed={5}
+        maxSpeed={5}
+        starWidth={20}
+        starHeight={2}
+        starColor="#fff"
       />
 
-      <Image
-        src="/assets/footer/stars.png"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute top-0 z-30 lg:-left-20 w-[400px] lg:w-[790.597px] h-[200px] lg:h-[409.86px] rotate-[-10.804deg] object-cover"
-      />
-      <Image
+      <div className="absolute top-0 z-30 left-0 w-full h-full rotate-[-10.804deg] object-cover">
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={500}
+          particleSpread={20}
+          speed={0.5}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={true}
+        />
+      </div>
+
+      {/* <Image
         src="/assets/footer/stars.png"
         alt="star"
         width={1000}
@@ -125,7 +129,7 @@ function Footer() {
         width={1000}
         height={1000}
         className="absolute -top-10  -right-20 w-[790.597px] h-[290px] rotate-[20.804deg] object-cover"
-      />
+      /> */}
 
       <div
         className="absolute z-0 top-40 left-1/2 -translate-x-1/2 w-[7680px] h-[7680px] flex-shrink-0 rounded-[9999px]"

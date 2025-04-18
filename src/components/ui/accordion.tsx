@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { PlusIcon } from "lucide-react";
+import { MinusIcon, PlusIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -34,15 +34,25 @@ function AccordionTrigger({
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
+        // add `group` here
         className={cn(
-          "focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-base font-medium transition-all outline-none  focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180",
+          "group focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-base font-medium transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180",
           className
         )}
         {...props}
       >
         {children}
+
         <div className="p-2 rounded-full border border-[#161C44] bg-[#0E122E]">
-          <PlusIcon className="text-white  pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200 " />
+          <PlusIcon
+            className="block size-4 shrink-0 text-white translate-y-0.5 transition-transform duration-200 
+                       group-data-[state=open]:hidden"
+          />
+
+          <MinusIcon
+            className="hidden size-4 shrink-0 text-white translate-y-0.5 transition-transform duration-200 
+                       group-data-[state=open]:block"
+          />
         </div>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

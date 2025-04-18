@@ -1,13 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "lucide-react";
+
 import Link from "next/link";
 import { useState } from "react";
-import { Button } from "../ui/button";
+
 import Container from "./container";
 import Logo from "./logo";
 import GlowButton from "./glow-button";
+import HamButton from "./ham-button";
+import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
   const [active, setActive] = useState(0);
@@ -15,7 +17,7 @@ const Navbar = () => {
 
   return (
     <Container asChild>
-      <nav className={cn("absolute h-[5.5rem] flex items-center")}>
+      <nav className={cn("absolute flex items-center h-auto lg:h-[5.5rem]")}>
         <div className="w-full flex items-center justify-between ">
           <Logo />
 
@@ -42,50 +44,74 @@ const Navbar = () => {
             <Link href="/login" className="text-sm font-medium">
               Login
             </Link>
-            <Link href="#footer">
-              <GlowButton text="START FREE TRIAL" />
-            </Link>
+
+            <GlowButton text="START FREE TRIAL" href="#pricing" />
           </div>
+        </div>
+        {/* for mobile */}
+        <div className="relative lg:hidden">
+          <HamButton
+            isOpen={isOpen}
+            onClick={() => setIsOpen((p) => !p)}
+            className="z-30"
+          />
 
-          {/* for mobile */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                key="mobile-menu"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "60%" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="
+          fixed
+          top-0
+          left-0
+          right-0
+          overflow-hidden
+          bg-[#00031c]
+          flex
+          flex-col
+          z-40
+        "
+              >
+                <div className="flex items-center justify-between px-3 ">
+                  <Logo />
+                  <HamButton isOpen={true} onClick={() => setIsOpen(false)} />
+                </div>
 
-          {isOpen ? (
-            <img
-              src="/assets/home/close.svg"
-              alt="hamburger"
-              className="block lg:hidden"
-              onClick={() => setIsOpen(false)}
-            />
-          ) : (
-            <img
-              src="/assets/navbar/ham.svg"
-              alt="hamburger"
-              className="block lg:hidden p-2 rounded-lg border"
-              onClick={() => setIsOpen(true)}
-            />
-          )}
+                <ul className="flex-1 overflow-y-auto flex flex-col items-center justify-center space-y-8 px-6 text-lg text-white">
+                  {NAVITEMS.map((item, idx) => (
+                    <li
+                      key={idx}
+                      onClick={() => {
+                        setActive(idx);
+                        setIsOpen(false);
+                      }}
+                      className={cn(
+                        "cursor-pointer transition-colors hover:text-blue-400",
+                        active === idx && "text-blue-300"
+                      )}
+                    >
+                      {item.label}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="px-6 py-4">
+                  <GlowButton
+                    text="START FREE TRIAL"
+                    href="#pricing"
+                    // onClick={() => setIsOpen(false)}
+                    className="w-full py-6"
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
-        {/* <ul className="flex mt-6 lg:hidden flex-col items-center justify-center gap-[8px] leading-[32px] text-[24px] font-[600] text-[#27283599]  px-6  rounded-3xl   bg-transparent font-satoshi">
-          {NAVITEMS.map((item, idx) => (
-            <li
-              className={cn(
-                "cursor-pointer py-3.5 px-[12px] rounded-2xl hover:py-1.5 hover:text-black hover:activeMenu transition-all  ",
-                active === idx ? " text-black  " : ""
-              )}
-              key={idx}
-            >
-              {item.label}
-            </li>
-          ))}
-
-          <Link href="#footer">
-            <Button className="flex text-[14px] font-[500] items-center justify-center py-6 gap-2 gradient-background  mb-4">
-              Get Started
-              <ChevronRight width={17} />
-            </Button>
-          </Link>
-        </ul> */}
         <div className="border-background-gradient absolute bottom-0 left-0 w-full h-px" />
       </nav>
     </Container>
