@@ -19,7 +19,7 @@ const FeatureCard = ({
   src,
 }: FeatureCardProps) => {
   return (
-    <div className={className}>
+    <article className={className}>
       <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
         <div className="flex w-full justify-between items-center gap-4">
           <Image src={src} alt="bolt" width={40} height={40} />
@@ -35,7 +35,7 @@ const FeatureCard = ({
           {description}
         </p>
       </div>
-    </div>
+    </article>
   );
 };
 

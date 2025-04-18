@@ -26,10 +26,12 @@ function Pricing() {
     href,
   }: PricingCardProps) => {
     return (
-      <div
+      <section
+        aria-labelledby="pricing-heading"
         className={cn(
           "relative flex flex-col  p-8 rounded-2xl border border-[#959EFE]/20 overflow-hidden flex-1",
-          "hover:relative hover:after:z-20 hover:after:absolute hover:after:inset-[.99px] hover:after:rounded-2xl hover:after:backdrop-blur-[2.91213px] hover:after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] hover:bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] transition-all duration-500"
+          "hover:relative hover:after:z-20 hover:after:absolute hover:after:inset-[.99px] hover:after:rounded-2xl hover:after:backdrop-blur-[2.91213px] hover:after:bg-[linear-gradient(130deg,_#121865_-97.79%,_#060726_51.6%)] hover:bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] transition-all duration-500",
+          "group"
         )}
       >
         <Image
@@ -72,7 +74,7 @@ function Pricing() {
 
           {/* "What's included?" heading */}
           <h4 className="text-sm text-[#CAC9D1] font-semibold mb-3 border-t-[1px] border-[#97A2C2]/30 pt-6">
-            What’s included:
+            What's included:
           </h4>
 
           {/* Feature list */}
@@ -98,21 +100,11 @@ function Pricing() {
             href={href}
             className={cn(
               "w-full z-50 text-base py-[30px] rounded-2xl grayscale",
-              "hover:grayscale-0"
+              "group-hover:grayscale-0 transition-all duration-500"
             )}
           />
-          {/* <button
-            className={cn(
-              "w-full py-3 rounded-lg font-medium transition-colors",
-              isPopular
-                ? "bg-[#5834E9] text-white hover:bg-[#4A2EC7]"
-                : 
-            )}
-          >
-            Get Started
-          </button> */}
         </div>
-      </div>
+      </section>
     );
   };
 
@@ -122,7 +114,15 @@ function Pricing() {
         className="relative z-10 flex flex-col items-center justify-center mt-24 lg:mt-32 h-full"
         id="pricing"
       >
-        <div className="relative h-full w-full overflow-hidden">
+        <div className="relative h-full w-full overflow-hidden max-w-[105rem]">
+          <div
+            className="mask-gradient w-1/5 2xl:w-2/5 rotate-180 h-full absolute top-0 right-0  z-40"
+            aria-hidden
+          />
+          <div
+            className="mask-gradient w-1/5 2xl:w-2/5  h-full absolute top-0 left-0 z-40"
+            aria-hidden
+          />
           <Image
             src="/assets/pricing/grid.svg"
             alt="pricing-grid"
@@ -131,11 +131,11 @@ function Pricing() {
             fetchPriority="high"
             className="w-full h-full"
           />
-          <div className="absolute -top-full left-1/2 -translate-x-1/2 w-full h-full rounded-[1444px] opacity-40 bg-[#5834E9] blur-[115px]" />
+          <div className="absolute -top-full left-1/2 -translate-x-1/2 w-full h-full rounded-[1444px] opacity-40 bg-[#5834E9] blur-[115px] " />
         </div>
         <div className="absolute -top-0 left-1/2 -translate-x-1/2 w-80 h-16 z-20 rounded-[137.5px] opacity-30 bg-[#5834E9] blur-[50px]" />
         <div
-          className="absolute left-1/2 top-0 -translate-x-1/2 w-full h-[2px]"
+          className="absolute left-1/2 top-0 -translate-x-1/2 w-full h-[2px] max-w-[105rem]"
           style={{
             background:
               "linear-gradient(90deg, #0E0B3D 0%, #4A56FF 40%, #B3B7F9 51%, #4A56FF 63%, #0E0B3D 100%)",
@@ -162,6 +162,7 @@ function Pricing() {
             >
               Pricing
             </h1>
+
             <Image
               src="/assets/features/line_right.svg"
               alt="line-right"
@@ -171,18 +172,18 @@ function Pricing() {
             />
           </div>
 
-          <h1 className=" text-[22px] lg:text-5xl font-bold ">
+          <h2 className=" text-[22px] lg:text-5xl font-bold ">
             Get Instant Access To <br />
             Beat The Competition.
-          </h1>
-          <h1 className="text-center text-[#CAC9D1] text-base  lg:text-lg font-normal max-w-xl ">
+          </h2>
+          <h2 className="text-center text-[#CAC9D1] text-base  lg:text-lg font-normal max-w-xl ">
             Get full access to powerful tools with a simple,{" "}
             <br className="lg:hidden" /> all-in-one pricing plan.
-          </h1>
+          </h2>
         </div>
       </div>
       <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-40 lg:py-10 gap-6">
-        <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
+        <section className="flex flex-col lg:flex-row gap-8 w-full justify-center">
           <PricingCard
             title="1 month"
             price="₹2,999"
@@ -230,7 +231,7 @@ function Pricing() {
             originalPrice="40,000"
             href="https://courses.ecomtushar.com/offers/HFpFEJra/checkout"
           />
-        </div>
+        </section>
       </Container>
     </>
   );

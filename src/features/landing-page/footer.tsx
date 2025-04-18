@@ -11,66 +11,66 @@ function Footer() {
         <h1 className="text-2xl lg:text-[4rem]  font-bold lg:leading-[120%] tracking-[-0.554px] text-center">
           Supercharge Your <br /> Dropshipping Success
         </h1>
-        <h1 className="text-center text-[#CAC9D1] font-satoshi text-sm lg:text-[22px] opacity-80 lg:leading-[34.8px] pt-5">
+        <h3 className="text-center text-[#CAC9D1] font-satoshi text-sm lg:text-[22px] opacity-80 lg:leading-[34.8px] pt-5">
           Unlock powerful tools, winning products, and{" "}
           <br className="lg:hidden" /> expert insights—{" "}
           <br className="hidden lg:block" />
           everything you need to scale <br className="lg:hidden" /> your store
           effortlessly.
-        </h1>
+        </h3>
         <GlowButton
           text="Start Scaling"
           className="w-60 lg:w-[33rem] mt-8 text-base lg:text-xl h-12 lg:h-16"
           href="/#pricing"
         />
       </div>
-      <div className="w-full py-4  z-50  absolute bottom-0 flex justify-center items-center ">
+      <footer className="w-full py-4  z-50  absolute bottom-0 flex justify-center items-center ">
         <div className="px-2 lg:px-8 py-4 flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-9 text-sm text-[#C9CBCF] font-satoshi text-[14px] font-normal leading-[14px] tracking-[-0.28px]">
           <div className="flex gap-2 lg:gap-9 order-2 lg:order-1">
-            <h1 className="text-[#61656B]">Copyright © 2025</h1>
-            <h1 className="text-[#61656B]">Ecom Tushar</h1>
-            <h1 className="text-[#61656B]">All rights reserved</h1>
+            <h4 className="text-[#61656B]">Copyright © 2025</h4>
+            <h4 className="text-[#61656B]">Ecom Tushar</h4>
+            <h4 className="text-[#61656B]">All rights reserved</h4>
           </div>
           <div className="flex gap-9 order-3 lg:order-2">
-            <h1>Terms of Service</h1>
-            <h1>Privacy Policy</h1>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
           </div>
 
           <div className="flex gap-4 order-1 lg:order-3">
             <Image
               src="/assets/footer/icons/x.svg"
-              alt="twitter"
+              alt="Follow us on Twitter"
               width={20}
               height={20}
             />
             <Image
               src="/assets/footer/icons/linkedin.svg"
-              alt="instagram"
+              alt="Follow us on linkedin"
               width={20}
               height={20}
             />
             <Image
               src="/assets/footer/icons/github.svg"
-              alt="facebook"
+              alt="Follow us on github"
               width={20}
               height={20}
             />
             <Image
               src="/assets/footer/icons/youtube.svg"
-              alt="youtube"
+              alt="Follow us on youtube"
               width={20}
               height={20}
             />
             <Image
               src="/assets/footer/icons/slack.svg"
-              alt="linkedin"
+              alt="Follow us on slack"
               width={20}
               height={20}
             />
           </div>
         </div>
-      </div>
-      <div className="w-full overflow-hidden">
+      </footer>
+      <div className="w-full overflow-hidden " aria-hidden>
         <Image
           src="/assets/footer/Ellipse 7192.png"
           alt="footer"
@@ -87,9 +87,13 @@ function Footer() {
         starWidth={20}
         starHeight={2}
         starColor="#fff"
+        aria-hidden
       />
 
-      <div className="absolute top-0 z-30 left-0 w-full h-full rotate-[-10.804deg] object-cover">
+      <div
+        className="absolute top-0 z-30 left-0 w-full h-full rotate-[-10.804deg] object-cover"
+        aria-hidden
+      >
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={500}
@@ -102,37 +106,9 @@ function Footer() {
         />
       </div>
 
-      {/* <Image
-        src="/assets/footer/stars.png"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute top-0 z-30  lg:-left-40 w-[790.597px] h-[409.86px] rotate-[10.804deg] object-cover"
-      />
-      <Image
-        src="/assets/footer/stars.png"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute bottom-32 lg:bottom-0 z-30 left-40 w-[790.597px] h-[409.86px] rotate-[10.804deg] object-cover"
-      />
-      <Image
-        src="/assets/footer/stars_2.png"
-        alt="star"
-        width={360}
-        height={200}
-        className="absolute -top-40 lg:top-50 z-30 -right-40   rotate-[10.804deg] object-cover"
-      />
-      <Image
-        src="/assets/footer/stars_3.png"
-        alt="star"
-        width={1000}
-        height={1000}
-        className="absolute -top-10  -right-20 w-[790.597px] h-[290px] rotate-[20.804deg] object-cover"
-      /> */}
-
       <div
         className="absolute z-0 top-40 left-1/2 -translate-x-1/2 w-[7680px] h-[7680px] flex-shrink-0 rounded-[9999px]"
+        aria-hidden
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.50) -6.63%, rgba(255, 255, 255, 0.00) 1.32%)",
@@ -145,6 +121,7 @@ function Footer() {
             "radial-gradient(50% 50% at 50% 50%, #00031C 85.17%, #211E9C 97.67%, #2A26DF 100%)",
           boxShadow: "0px 0px 115.2px 0px rgba(255, 255, 255, 0.60) inset",
         }}
+        aria-hidden
       />
       <div
         className="absolute -z-10 top-40 left-1/2 -translate-x-1/2 lg:w-[3237px] lg:h-[3237px] lg:rounded-[2487.51px] w-[1231.879px] h-[1231.879px] rounded-[946.652px]"
@@ -152,6 +129,7 @@ function Footer() {
           background: "#5834E9",
           filter: "blur(62.25px)",
         }}
+        aria-hidden
       />
       <div
         className="absolute -z-20 top-40 left-1/2 -translate-x-1/2 w-[3237px] h-[3237px] flex-shrink-0 rounded-[99999px]"
@@ -159,6 +137,7 @@ function Footer() {
           background: "#FFF",
           filter: "blur(12px)",
         }}
+        aria-hidden
       />
     </div>
   );

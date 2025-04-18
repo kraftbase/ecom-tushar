@@ -20,9 +20,9 @@ const ToolRow: React.FC<ToolRowProps> = ({ tool }) => {
       `}
       >
         {/* Tool Name */}
-        <div className=" font-medium flex-1 ">{tool.name}</div>
+        <h1 className=" font-medium flex-1 ">{tool.name}</h1>
         {/* Price */}
-        <div className=" text-center flex-1">{tool.price.toLocaleString()}</div>
+        <h2 className=" text-center flex-1">{tool.price.toLocaleString()}</h2>
         {/* Dropship Check */}
         <div className="text-center flex-1 flex justify-center items-center">
           {tool.dropship && (
