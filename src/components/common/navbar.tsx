@@ -45,7 +45,7 @@ const Navbar = () => {
               Login
             </Link>
 
-            <GlowButton text="START FREE TRIAL" href="#pricing" />
+            <GlowButton text="START FREE TRIAL" href="/#pricing" />
           </div>
         </div>
         {/* for mobile */}
@@ -61,7 +61,7 @@ const Navbar = () => {
               <motion.div
                 key="mobile-menu"
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "60%" }}
+                animate={{ opacity: 1, height: "70%" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 className="
@@ -76,7 +76,7 @@ const Navbar = () => {
           z-40
         "
               >
-                <div className="flex items-center justify-between px-3 ">
+                <div className="flex items-center justify-between px-3 md:px-8 ">
                   <Logo />
                   <HamButton isOpen={true} onClick={() => setIsOpen(false)} />
                 </div>
@@ -99,11 +99,10 @@ const Navbar = () => {
                   ))}
                 </ul>
 
-                <div className="px-6 py-4">
+                <div className="px-6 py-4" onClick={() => setIsOpen(false)}>
                   <GlowButton
                     text="START FREE TRIAL"
-                    href="#pricing"
-                    // onClick={() => setIsOpen(false)}
+                    href="/#pricing"
                     className="w-full py-6"
                   />
                 </div>

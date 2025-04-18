@@ -46,12 +46,12 @@ function FeaturesGrid() {
         {/* Top Row - 2 cards */}
 
         <div className="flex flex-col md:flex-row gap-6">
-          <div
-            className="rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden flex justify-center items-center flex-col"
+          <article
+            className="rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden flex justify-center items-center flex-col "
             onMouseEnter={() => handleMouseEnter(lottieRefs.sevenSpy)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.sevenSpy)}
           >
-            <div className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
+            <header className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
               <h3 className="text-lg lg:text-2xl font-bold mb-2">
                 10 Spy Tools Used by the Pros
               </h3>
@@ -59,22 +59,23 @@ function FeaturesGrid() {
                 Find winning products, analyze top stores, and uncover ad
                 strategies in seconds.
               </p>
-            </div>
+            </header>
 
             <Lottie
               lottieRef={lottieRefs.sevenSpy}
               animationData={sevenSpy}
               loop={false}
+              aria-hidden
               className="w-[98%]  rounded-2xl lg:rounded-none lg:w-3/4 relative z-50"
             />
-          </div>
+          </article>
 
-          <div
+          <article
             className="rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80"
             onMouseEnter={() => handleMouseEnter(lottieRefs.hundredHandpicked)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.hundredHandpicked)}
           >
-            <div className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
+            <header className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
               <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
                 100 Handpicked Winning Products to Make You Win
               </h3>
@@ -83,19 +84,20 @@ function FeaturesGrid() {
                 winning products every month to ensure your store stays ahead of
                 the competition.
               </p>
-            </div>
+            </header>
 
             <Lottie
               lottieRef={lottieRefs.hundredHandpicked}
               animationData={hundredHandpicked}
               loop={false}
+              aria-hidden
               className="w-[98%] rounded-2xl lg:rounded-none lg:w-3/4 absolute bottom-[1.2px] left-1/2 -translate-x-1/2 z-30"
             />
-          </div>
+          </article>
         </div>
 
         {/* Middle Full-Width Card */}
-        <div
+        <article
           className="flex flex-col lg:flex-row justify-center items-center  rounded-2xl p-2 lg:p-6 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]"
           onMouseEnter={() => handleMouseEnter(lottieRefs.premadeProduct)}
           onMouseLeave={() => handleMouseLeave(lottieRefs.premadeProduct)}
@@ -104,9 +106,10 @@ function FeaturesGrid() {
             lottieRef={lottieRefs.premadeProduct}
             animationData={premadeProduct}
             loop={false}
+            aria-hidden
             className="z-30 order-2 lg:order-1 lg:flex-1"
           />
-          <div className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 order-1 lg:order-2 flex-1 ">
+          <header className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 order-1 lg:order-2 flex-1 ">
             <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
               Pre-Made Product Pages & Creatives. Launch 10x Faster.
             </h3>
@@ -115,17 +118,17 @@ function FeaturesGrid() {
               creatives, and compelling copy—designed to help you scale faster
               with ease. No design skills needed, just launch and grow.
             </p>
-          </div>
-        </div>
+          </header>
+        </article>
 
         {/* Bottom Row - 3 cards */}
         <div className="flex flex-col md:flex-row gap-6">
-          <div
+          <article
             className="rounded-2xl p-2  flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]"
             onMouseEnter={() => handleMouseEnter(lottieRefs.preDesigned)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.preDesigned)}
           >
-            <div className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
+            <header className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
                 Pre-Designed Landing Pages
               </h3>
@@ -133,16 +136,17 @@ function FeaturesGrid() {
                 No designers needed. Ready-to-use product pages you can just
                 copy, paste, and launch.
               </p>
-            </div>
+            </header>
 
             <Lottie
               lottieRef={lottieRefs.preDesigned}
               animationData={preDesigned}
               loop={false}
+              aria-hidden
               className="rounded-2xl relative z-50"
             />
-          </div>
-          <div
+          </article>
+          <article
             className="rounded-2xl p-2  flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]"
             onMouseEnter={() =>
               handleMouseEnter(lottieRefs.handpickedCreatives)
@@ -151,7 +155,7 @@ function FeaturesGrid() {
               handleMouseLeave(lottieRefs.handpickedCreatives)
             }
           >
-            <div className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
+            <header className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 ">
                 Handpicked Creatives
               </h3>
@@ -159,21 +163,22 @@ function FeaturesGrid() {
                 Carefully curated top-performing ad creatives, ready for you to
                 launch ads instantly.
               </p>
-            </div>
+            </header>
 
             <Lottie
               lottieRef={lottieRefs.handpickedCreatives}
               animationData={handpickedCreatives}
               loop={false}
+              aria-hidden
               className="w-full  relative z-50"
             />
-          </div>
-          <div
+          </article>
+          <article
             className="rounded-2xl p-2  flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]"
             onMouseEnter={() => handleMouseEnter(lottieRefs.LauchTenX)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.LauchTenX)}
           >
-            <div className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-8 ">
+            <header className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-8 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 ">
                 Launch 10x Faster
               </h3>
@@ -181,7 +186,7 @@ function FeaturesGrid() {
                 No more wasted time and ad spend. Launch your next product
                 within minutes, not weeks.
               </p>
-            </div>
+            </header>
             {/* <Image
               src={"/assets/features/Lightning Bolt.png"}
               alt="illustation"
@@ -193,9 +198,10 @@ function FeaturesGrid() {
               lottieRef={lottieRefs.LauchTenX}
               animationData={LauchTenX}
               loop={false}
+              aria-hidden
               className="w-full relative z-50"
             />
-          </div>
+          </article>
         </div>
       </div>
       <GlowButton

@@ -8,7 +8,7 @@ function HowItWorks() {
 
   return (
     <Container className="relative overflow-visible flex flex-col lg:flex-row justify-center items-center  max-w-7xl mx-auto py-10  gap-6 ">
-      <div className={commonCardClasses}>
+      <article className={commonCardClasses}>
         <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
           <Image
             src={"/assets/features/bolt.png"}
@@ -25,8 +25,8 @@ function HowItWorks() {
             resources immediately.
           </p>
         </div>
-      </div>
-      <div className={commonCardClasses}>
+      </article>
+      <article className={commonCardClasses}>
         <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
           <Image
             src={"/assets/features/bolt.png"}
@@ -43,8 +43,8 @@ function HowItWorks() {
             research, landing pages, and ad creatives.
           </p>
         </div>
-      </div>
-      <div className={commonCardClasses}>
+      </article>
+      <article className={commonCardClasses}>
         <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
           <Image
             src={"/assets/features/bolt.png"}
@@ -61,7 +61,7 @@ function HowItWorks() {
             effortlessly.
           </p>
         </div>
-      </div>
+      </article>
     </Container>
   );
 }

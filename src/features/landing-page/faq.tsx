@@ -13,7 +13,7 @@ function FAQ() {
 
   return (
     <Container className="relative overflow-visible flex flex-col justify-center items-center max-w-7xl mx-auto py-6 lg:py-10 gap-6 ">
-      <Accordion type="single" collapsible className="lg:w-2/3 ">
+      <Accordion type="single" collapsible className="w-full lg:w-2/3 ">
         <AccordionItem value="item-1" className={accordionItemClass}>
           <AccordionTrigger className="z-50">
             What is Dropship Mastery?

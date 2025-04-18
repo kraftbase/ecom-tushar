@@ -1,13 +1,17 @@
 import Container from "@/components/common/container";
 import Particles from "@/components/common/particles";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 const HeroSection = () => {
   return (
-    <Container className="relative overflow-x-clip pt-20 lg:pt-36">
-      <div className="w-full h-full absolute top-0 left-0">
+    <Container
+      className="relative overflow-x-clip pt-20 lg:pt-36"
+      aria-labelledby="hero-title"
+    >
+      <div className="w-full h-full absolute top-0 left-0" aria-hidden>
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={150}
@@ -26,10 +30,17 @@ const HeroSection = () => {
         className="hidden md:block w-full h-fit absolute top-0 left-0 "
         fill
         fetchPriority="high"
+        aria-hidden
       />
-      <div className="mask-gradient w-1/5 2xl:w-2/5 rotate-180 h-full absolute top-0 right-0 " />
-      <div className="mask-gradient w-1/5 2xl:w-2/5  h-full absolute top-0 left-0 " />
-      <div className="w-full overflow-hidden">
+      <div
+        className="mask-gradient w-1/5 2xl:w-2/5 rotate-180 h-full absolute top-0 right-0 "
+        aria-hidden
+      />
+      <div
+        className="mask-gradient w-1/5 2xl:w-2/5  h-full absolute top-0 left-0 "
+        aria-hidden
+      />
+      <div className="w-full overflow-hidden" aria-hidden>
         <Image
           src="/assets/hero/grid-bg.svg"
           alt="hero-section"
@@ -41,7 +52,7 @@ const HeroSection = () => {
       </div>
 
       <header className="relative z-10 flex flex-col items-center justify-center">
-        <Badge className="text-white text-sm py-3 px-5 mb-5 font-medium  z-10 rounded-[100px] relative after:z-20 after:absolute after:inset-[.5px] after:rounded-[100px] after:bg-[#00031C] after:shadow-[inset_0px_-7px_9px_0px_rgba(255,255,255,0.05)] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]">
+        <Badge className="text-white text-sm py-3 px-5 mb-5 font-medium  z-10 rounded-[100px] relative after:z-20 after:absolute after:inset-[.5px] after:rounded-[100px] after:bg-[#00031C] after:shadow-[inset_0px_-7px_9px_0px_rgba(255,255,255,0.05)] bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]  bg-[length:150%_150%] animate-[gradientShift_4s_linear_infinite]  ">
           <h1 className="z-30 flex justify-center items-center gap-4 font-satoshi">
             Dropshippers' #1 Tool For Serious Scale{" "}
             <ChevronRight className="w-4 h-4" />
@@ -67,7 +78,10 @@ const HeroSection = () => {
           industry's most battle-tested tools
         </p>
 
-        <Button className="cursor-pointer button-secondary-background relative my-10   h-[62px] px-8 font-medium">
+        <Link
+          className="cursor-pointer button-secondary-background relative my-10   h-[62px] px-8 font-medium flex justify-center items-center "
+          href={"/#pricing"}
+        >
           <Image
             src="/assets/hero/button-secondary-dots.svg"
             alt="arrow-right"
@@ -75,7 +89,7 @@ const HeroSection = () => {
             className="z-0"
           />
           Get Access
-        </Button>
+        </Link>
       </header>
 
       <div className="relative flex flex-col items-center justify-center">
