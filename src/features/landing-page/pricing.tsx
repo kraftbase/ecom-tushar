@@ -157,9 +157,11 @@ function Pricing() {
             />
             <h1
               className={cn(
-                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-base font-normal leading-6"
+                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-base font-normal leading-6 relative"
               )}
             >
+              <span className="absolute w-2 h-2 bg-[#4F60FA] rounded-full left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 blur-[2px]" />
+              <span className="absolute w-2 h-2 bg-[#4F60FA] rounded-full right-0 top-1/2 -translate-y-1/2 translate-x-1/2 blur-[2px]" />
               Pricing
             </h1>
 

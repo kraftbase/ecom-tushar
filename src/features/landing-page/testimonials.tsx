@@ -15,7 +15,7 @@ function Testimonials() {
             &ldquo;
           </div>
 
-          <blockquote className="text-gray-100 text-lg md:text-xl text-center lg:text-left leading-relaxed">
+          <blockquote className="text-gray-100 font-satoshi font-bold  text-lg md:text-xl text-center lg:text-left leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
