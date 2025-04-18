@@ -18,6 +18,10 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Tomato+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className="font-sans antialiased">{children}</body>
     </html>

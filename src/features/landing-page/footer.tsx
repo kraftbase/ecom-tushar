@@ -1,6 +1,12 @@
 import GlowButton from "@/components/common/glow-button";
 import Particles from "@/components/common/particles";
 import { ShootingStars } from "@/components/ui/shooting-stars";
+import localFont from "next/font/local";
+
+const tomatoGrotesk = localFont({
+  src: "./../../app/fonts/TomatoGrotesk-Bold.otf",
+});
+
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +14,9 @@ function Footer() {
   return (
     <div className="h-[35rem] lg:h-[60rem] relative mt-20 overflow-hidden flex flex-col justify-center items-center">
       <div className="flex flex-col items-center justify-center gap-2.5 p-8 z-50 relative -top-10 lg:top-0">
-        <h1 className="text-2xl lg:text-[4rem]  font-bold lg:leading-[120%] tracking-[-0.554px] text-center">
+        <h1
+          className={`text-2xl lg:text-[4rem] font-tomato-grotesk lg:leading-[120%] tracking-[-0.554px] text-center ${tomatoGrotesk.className}`}
+        >
           Supercharge Your <br /> Dropshipping Success
         </h1>
         <h3 className="text-center text-[#CAC9D1] font-satoshi text-sm lg:text-[22px] opacity-80 lg:leading-[34.8px] pt-5">

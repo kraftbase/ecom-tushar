@@ -42,12 +42,12 @@ function FeaturesGrid() {
 
   return (
     <Container className="relative overflow-visible flex flex-col justify-center items-center font-satoshi ">
-      <div className="max-w-6xl mx-auto flex flex-col gap-6 py-10">
+      <div className="max-w-7xl mx-auto flex flex-col gap-6 py-10">
         {/* Top Row - 2 cards */}
 
         <div className="flex flex-col md:flex-row gap-6">
           <article
-            className="rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden flex justify-center items-center flex-col "
+            className="rounded-2xl p-4 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden flex justify-center items-center flex-col "
             onMouseEnter={() => handleMouseEnter(lottieRefs.sevenSpy)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.sevenSpy)}
           >
@@ -71,7 +71,7 @@ function FeaturesGrid() {
           </article>
 
           <article
-            className="rounded-2xl p-6 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80"
+            className="rounded-2xl p-4 flex-1 relative z-30 after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl after:bg-[#060925]/95 bg-[linear-gradient(20deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)] overflow-hidden pb-80"
             onMouseEnter={() => handleMouseEnter(lottieRefs.hundredHandpicked)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.hundredHandpicked)}
           >
@@ -98,7 +98,7 @@ function FeaturesGrid() {
 
         {/* Middle Full-Width Card */}
         <article
-          className="flex flex-col lg:flex-row justify-center items-center  rounded-2xl p-2 lg:p-6 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]"
+          className="flex flex-col lg:flex-row justify-center items-center  rounded-2xl p-2 lg:p-4 flex-1 relative after:z-20 after:absolute after:inset-[.08rem] after:rounded-2xl  after:bg-[#060925]/95 bg-[linear-gradient(235deg,_#15143A_18%,_#4450AC_49%,_#15143A_78%)]"
           onMouseEnter={() => handleMouseEnter(lottieRefs.premadeProduct)}
           onMouseLeave={() => handleMouseLeave(lottieRefs.premadeProduct)}
         >
@@ -110,8 +110,9 @@ function FeaturesGrid() {
             className="z-30 order-2 lg:order-1 lg:flex-1"
           />
           <header className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 order-1 lg:order-2 flex-1 ">
-            <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
-              Pre-Made Product Pages & Creatives. Launch 10x Faster.
+            <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center w-full">
+              Pre-Made Product Pages & <br className="lg:hidden" /> Creatives.{" "}
+              <br className="hidden lg:block" /> Launch 10x Faster.
             </h3>
             <p className="text-sm lg:text-xl text-white/70 text-center lg:leading-9">
               Get fully optimized product pages, conversion-focused ad
@@ -128,7 +129,7 @@ function FeaturesGrid() {
             onMouseEnter={() => handleMouseEnter(lottieRefs.preDesigned)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.preDesigned)}
           >
-            <header className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
+            <header className="relative z-40 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 lg:pb-0 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
                 Pre-Designed Landing Pages
               </h3>
@@ -155,7 +156,7 @@ function FeaturesGrid() {
               handleMouseLeave(lottieRefs.handpickedCreatives)
             }
           >
-            <header className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 ">
+            <header className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 lg:pb-0 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 ">
                 Handpicked Creatives
               </h3>
@@ -178,7 +179,7 @@ function FeaturesGrid() {
             onMouseEnter={() => handleMouseEnter(lottieRefs.LauchTenX)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.LauchTenX)}
           >
-            <header className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-8 ">
+            <header className="relative z-30 flex flex-col items-center lg:items-start justify-center gap-4 p-4 lg:p-8 lg:pb-0 ">
               <h3 className="text-lg lg:text-xl font-bold mb-2 ">
                 Launch 10x Faster
               </h3>

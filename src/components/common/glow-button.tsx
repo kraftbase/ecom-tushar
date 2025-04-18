@@ -27,7 +27,7 @@ const GlowButton = ({ text, className, href }: GlowButtonProps) => {
             opacity: "90%",
           }}
         />
-        {text}
+        <span className="relative z-30">{text}</span>
       </Button>
     </Link>
   );

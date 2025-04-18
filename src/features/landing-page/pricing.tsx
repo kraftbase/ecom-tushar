@@ -1,9 +1,15 @@
 import Container from "@/components/common/container";
 import GlowButton from "@/components/common/glow-button";
+import GreyButton from "@/components/common/grey-button";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import localFont from "next/font/local";
+
+const tomatoGrotesk = localFont({
+  src: "./../../app/fonts/TomatoGrotesk-Bold.otf",
+});
 
 interface PricingCardProps {
   title: string;
@@ -12,6 +18,7 @@ interface PricingCardProps {
   isPopular?: boolean;
   originalPrice: string;
   discountLabel?: string;
+  isPopularText?: string;
   href: string;
 }
 
@@ -22,6 +29,7 @@ function Pricing() {
     features,
     originalPrice,
     discountLabel,
+    isPopularText,
     isPopular = false,
     href,
   }: PricingCardProps) => {
@@ -34,6 +42,20 @@ function Pricing() {
           "group"
         )}
       >
+        {isPopular && (
+          <div className="absolute h-20 -top-7 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center ">
+            <Image
+              src="/svg/price.svg"
+              alt="Popular plan"
+              width={149}
+              height={29}
+              className="w-auto h-auto"
+            />
+            <span className="absolute text-sm font-medium text-white">
+              {isPopularText}
+            </span>
+          </div>
+        )}
         <Image
           src={"/assets/pricing/Line Background.png"}
           alt="gird"
@@ -94,15 +116,22 @@ function Pricing() {
           </ul>
 
           {/* CTA Button */}
-
-          <GlowButton
-            text="Get Started"
-            href={href}
-            className={cn(
-              "w-full z-50 text-base py-[30px] rounded-2xl grayscale",
-              "group-hover:grayscale-0 transition-all duration-500"
-            )}
-          />
+          <div className="relative">
+            <GlowButton
+              text="Get Started"
+              href={href}
+              className={cn(
+                "w-full z-50 text-base py-[30px] rounded-2xl absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              )}
+            />
+            <GreyButton
+              text="Get Started"
+              href={href}
+              className={cn(
+                "w-full z-50 text-base py-[28px] rounded-2xl opacity-100 group-hover:opacity-0 transition-opacity duration-300"
+              )}
+            />
+          </div>
         </div>
       </section>
     );
@@ -174,11 +203,13 @@ function Pricing() {
             />
           </div>
 
-          <h2 className=" text-[22px] lg:text-5xl font-bold ">
+          <h2
+            className={` text-[22px] lg:text-5xl font-bold ${tomatoGrotesk.className}`}
+          >
             Get Instant Access To <br />
             Beat The Competition.
           </h2>
-          <h2 className="text-center text-[#CAC9D1] text-base  lg:text-lg font-normal max-w-xl ">
+          <h2 className="text-center text-[#CAC9D1]/70 text-base  lg:text-lg font-normal max-w-xl ">
             Get full access to powerful tools with a simple,{" "}
             <br className="lg:hidden" /> all-in-one pricing plan.
           </h2>
@@ -199,7 +230,6 @@ function Pricing() {
               "Get supplier details",
             ]}
             originalPrice="40,000"
-            isPopular
             discountLabel="15% off"
             href="https://courses.ecomtushar.com/offers/53SYwTzo/checkout"
           />
@@ -216,6 +246,9 @@ function Pricing() {
               "Get supplier details",
             ]}
             originalPrice="40,000"
+            isPopular={true}
+            discountLabel="15% off"
+            isPopularText="Most Popular"
             href="https://courses.ecomtushar.com/offers/6doCApEH/checkout"
           />
           <PricingCard
@@ -231,6 +264,9 @@ function Pricing() {
               "Get supplier details",
             ]}
             originalPrice="40,000"
+            isPopular={true}
+            discountLabel="15% off"
+            isPopularText="Highest Savings"
             href="https://courses.ecomtushar.com/offers/HFpFEJra/checkout"
           />
         </section>

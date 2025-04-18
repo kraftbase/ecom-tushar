@@ -19,7 +19,7 @@ const Marquee: React.FC<MarqueeProps> = ({ images, className, icons }) => {
       <div
         className="marquee-track"
         style={
-          icons ? ({ "--track-width": "200px" } as CSSProperties) : undefined
+          icons ? ({ "--track-width": "220px" } as CSSProperties) : undefined
         }
       >
         {images.map((src, index) => (
