@@ -2,6 +2,11 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Particles from "./particles";
 import Marquee from "../Marque/Marque";
+import localFont from "next/font/local";
+
+const tomatoGrotesk = localFont({
+  src: "./../../app/fonts/TomatoGrotesk-Bold.otf",
+});
 
 interface FeaturesHeaderProps {
   mainImage?: {
@@ -83,7 +88,7 @@ const FeaturesHeader = ({
             />
             <h1
               className={cn(
-                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-['Poppins'] text-sm lg:text-base font-normal leading-6 relative",
+                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-satoshi text-sm lg:text-base font-normal leading-6 relative",
                 title.className
               )}
             >
@@ -125,13 +130,13 @@ const FeaturesHeader = ({
           )}
           <h1
             className={cn(
-              "text-[22px] lg:text-5xl font-bold ",
+              `text-[22px] lg:text-5xl font-bold ${tomatoGrotesk.className}`,
               headingClassName
             )}
           >
             {heading}
           </h1>
-          <h1 className="text-center text-[#CAC9D1]/70 text-base lg:text-lg font-normal max-w-xl">
+          <h1 className="text-center text-[#CAC9D1]/70 text-base lg:text-lg font-normal max-w-lg">
             {description}
           </h1>
         </div>

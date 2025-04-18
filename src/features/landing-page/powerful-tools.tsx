@@ -48,19 +48,19 @@ const PowerfulTools = () => {
           title="PipiAds"
           description="Discover top-performing TikTok ads and winning dropshipping products."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/7.png"
         />
         <FeatureCard
           title="Adnosaur"
           description="Track and analyze competitor ad campaigns to refine your strategy."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/1.png"
         />
         <FeatureCard
           title="Shophunter.io"
           description="Spy on competitor stores and uncover best-selling products."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/2.png"
         />
 
         {/* Second Column */}
@@ -68,38 +68,38 @@ const PowerfulTools = () => {
           title="FutureLib"
           description="Get AI-driven insights on emerging trends and market shifts."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/5.png"
         />
         <FeatureCard
           title="Winning Hunter"
           description="Find high-converting products with proven sales data."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/icon.png"
         />
         <FeatureCard
           title="Chat GPT+"
           description="Generate persuasive product descriptions and ad copy instantly."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/6.png"
         />
 
         <FeatureCard
           title="Foreplay.co"
           description="Uncovers hidden opportunities, empowering brands to innovate smarter and faster."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/9.jpeg"
         />
         <FeatureCard
           title="Runway.ml"
           description="Transforms ideas into visuals, videos, and multimedia, instantly bringing imagination to life"
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/10.jpeg"
         />
         <FeatureCard
           title="Pacdora"
           description="Turns concepts into shelf-ready visuals, optimizing aesthetics and efficiency to help brands stand out."
           className={featureCardClassName}
-          src="/assets/features/bolt.png"
+          src="/assets/features/8.png"
         />
 
         {/* Third Column */}
@@ -108,7 +108,7 @@ const PowerfulTools = () => {
           description="Generate persuasive product descriptions and ad copy instantly."
           // Apply grid placement only on large screens
           className={`${featureCardClassName} lg:col-start-2 lg:col-span-1`}
-          src="/assets/features/bolt.png"
+          src="/assets/features/4.png"
         />
       </div>
     </Container>

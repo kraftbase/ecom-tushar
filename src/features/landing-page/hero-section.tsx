@@ -94,7 +94,20 @@ const HeroSection = () => {
 
       <div className="relative flex flex-col items-center justify-center">
         <main className="relative z-10 flex flex-col items-center justify-center p-1 lg:p-4 rounded-sm lg:rounded-[14px] video-gradient-background aspect-[12/6] w-full lg:w-[90%]">
-          <div className="flex flex-col items-center justify-center rounded-sm  bg-black w-full h-full" />
+          <div className="flex flex-col items-center justify-center rounded-sm  w-full h-fit object-fit overflow-hidden bg-black relative">
+            {/* Video Player */}
+            <video
+              className="w-full h-full object-fit hero-video z-40 "
+              autoPlay
+              playsInline
+              muted // Controlled by state
+              loop
+              preload="auto"
+            >
+              <source src="/assets/hero/hero_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </main>
 
         <Image
