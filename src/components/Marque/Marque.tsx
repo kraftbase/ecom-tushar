@@ -7,20 +7,32 @@ import { cn } from "@/lib/utils";
 interface MarqueeProps {
   images: string[];
   className?: string;
+  icons?: boolean;
 }
 
-const Marquee: React.FC<MarqueeProps> = ({ images, className }) => {
+const Marquee: React.FC<MarqueeProps> = ({ images, className, icons }) => {
   return (
     <div
       className="marquee fadeout-horizontal"
       style={{ "--num-items": images.length } as CSSProperties}
     >
-      <div className="marquee-track">
+      <div
+        className="marquee-track"
+        style={
+          icons ? ({ "--track-width": "200px" } as CSSProperties) : undefined
+        }
+      >
         {images.map((src, index) => (
           <div
             key={index}
-            className="marquee-item icon-cards"
-            style={{ "--item-position": index + 1 } as CSSProperties}
+            className={`marquee-item icon-cards ${icons ? "h-10" : ""}`}
+            style={
+              {
+                "--item-position": index + 1,
+                "--item-width": icons ? "40px" : "96px",
+                "--item-gap": icons ? "12px" : "32px",
+              } as CSSProperties
+            }
           >
             <div
               className={cn(

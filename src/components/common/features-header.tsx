@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Particles from "./particles";
+import Marquee from "../Marque/Marque";
 
 interface FeaturesHeaderProps {
   mainImage?: {
@@ -51,7 +52,7 @@ const FeaturesHeader = ({
             particleCount={100}
             particleSpread={10}
             speed={0.1}
-            particleBaseSize={100}
+            particleBaseSize={50}
             moveParticlesOnHover={false}
             alphaParticles={false}
             disableRotation={true}
@@ -100,7 +101,7 @@ const FeaturesHeader = ({
           </div>
           {topContent && (
             <div className="relative w-40 gap-2 flex justify-start items-center border border-[#1F275F] rounded-full overflow-hidden lg:p-1">
-              {[1, 2, 3, 4, 5].map((num) => (
+              {/* {[1, 2, 3, 4, 5].map((num) => (
                 <Image
                   key={num}
                   src={"/assets/features/icon.png"}
@@ -108,7 +109,18 @@ const FeaturesHeader = ({
                   width={50}
                   height={50}
                 />
-              ))}
+              ))} */}
+              <Marquee
+                icons={true}
+                className="w-fit h-fit"
+                images={[
+                  "/assets/features/icon.png",
+                  "/assets/features/icon.png",
+                  "/assets/features/icon.png",
+                  "/assets/features/icon.png",
+                  "/assets/features/icon.png",
+                ]}
+              />
             </div>
           )}
           <h1
@@ -119,7 +131,7 @@ const FeaturesHeader = ({
           >
             {heading}
           </h1>
-          <h1 className="text-center text-[#CAC9D1] text-base lg:text-lg font-normal max-w-xl">
+          <h1 className="text-center text-[#CAC9D1]/70 text-base lg:text-lg font-normal max-w-xl">
             {description}
           </h1>
         </div>
