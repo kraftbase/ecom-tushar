@@ -94,7 +94,7 @@ const Navbar = () => {
                         active === idx && "text-blue-300"
                       )}
                     >
-                      {item.label}
+                      <a href={item.link}>{item.label}</a>
                     </li>
                   ))}
                 </ul>
@@ -128,7 +128,7 @@ const NAVITEMS = [
   },
   {
     label: "Pricing",
-    link: "#pricing",
+    link: "/#pricing",
   },
   {
     label: "Company",
