@@ -20,7 +20,7 @@ function HowItWorks() {
           <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
             Get Instant Access
           </h3>
-          <p className="text-sm lg:text-xl text-white/70 text-start">
+          <p className="text-sm lg:text-xl text-[#A7ADBE] text-start">
             Choose a plan and unlock premium tools, winning products, and expert
             resources immediately.
           </p>
@@ -38,7 +38,7 @@ function HowItWorks() {
           <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
             Explore Your Dashboard
           </h3>
-          <p className="text-sm lg:text-xl text-white/70 text-start">
+          <p className="text-sm lg:text-xl text-[#A7ADBE] text-start">
             Navigate an easy-to-use dashboard packed with spy tools, product
             research, landing pages, and ad creatives.
           </p>
@@ -56,7 +56,7 @@ function HowItWorks() {
           <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
             Start Scaling with Ease
           </h3>
-          <p className="text-sm lg:text-xl text-white/70 text-start">
+          <p className="text-sm lg:text-xl text-[#A7ADBE] text-start">
             Implement ready-made assets, run winning ads, and grow your store
             effortlessly.
           </p>

@@ -115,10 +115,10 @@ const FeaturesHeader = ({
                 className="w-fit h-fit"
                 images={[
                   "/assets/features/icon.png",
-                  "/assets/features/icon.png",
-                  "/assets/features/icon.png",
-                  "/assets/features/icon.png",
-                  "/assets/features/icon.png",
+                  "/assets/features/1.png",
+                  "/assets/features/2.png",
+                  "/assets/features/3.png",
+                  "/assets/features/4.png",
                 ]}
               />
             </div>

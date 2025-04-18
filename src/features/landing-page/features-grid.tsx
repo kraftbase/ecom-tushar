@@ -113,7 +113,7 @@ function FeaturesGrid() {
             <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
               Pre-Made Product Pages & Creatives. Launch 10x Faster.
             </h3>
-            <p className="text-sm lg:text-xl text-white/70 text-center lg:leading-11">
+            <p className="text-sm lg:text-xl text-white/70 text-center lg:leading-9">
               Get fully optimized product pages, conversion-focused ad
               creatives, and compelling copy—designed to help you scale faster
               with ease. No design skills needed, just launch and grow.
