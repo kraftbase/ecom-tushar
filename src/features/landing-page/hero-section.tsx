@@ -1,5 +1,6 @@
 import Container from "@/components/common/container";
 import Particles from "@/components/common/particles";
+import Typewriter from "@/components/common/typewriter";
 import { Badge } from "@/components/ui/badge";
 // import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
@@ -69,7 +70,15 @@ const HeroSection = () => {
             {" "}
             Without&nbsp;
             <span className="background-gradient-text-parent">
-              <span className="background-gradient-text">Relying on Luck.</span>
+              {/* <span className="background-gradient-text">Relying on Luck.</span> */}
+              <Typewriter
+                text={["Relying on Luck.", "Relying on Luck."]}
+                speed={70}
+                className="background-gradient-text"
+                waitTime={1500}
+                deleteSpeed={40}
+                // cursorChar={"_"}
+              />
             </span>
           </span>
         </h1>
