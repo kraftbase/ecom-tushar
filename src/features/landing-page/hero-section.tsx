@@ -82,7 +82,7 @@ const HeroSection = () => {
             </span>
           </span>
         </h1>
-        <p className="text-[#efedfd]/70 font-normal font-satoshi text-center  lg:text-lg max-w-4xl opacity-80 mt-4">
+        <p className="text-[#efedfd]/70 font-normal font-satoshi text-center  lg:text-lg max-w-lg  lg:max-w-4xl opacity-80 mt-4">
           Gain an unfair advantage over the competition by unlocking the
           industry's most battle-tested tools
         </p>
