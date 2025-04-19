@@ -137,7 +137,7 @@ function Pricing() {
               text="Get Started"
               href={href}
               className={cn(
-                "w-full z-50 text-base py-[28px] rounded-2xl opacity-100 group-hover:opacity-0 transition-opacity duration-300"
+                "w-full z-50 text-base py-[30px] rounded-2xl opacity-100 group-hover:opacity-0 transition-opacity duration-300"
               )}
             />
           </div>

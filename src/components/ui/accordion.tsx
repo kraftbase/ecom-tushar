@@ -43,7 +43,7 @@ function AccordionTrigger({
       >
         {children}
 
-        <div className="p-2 rounded-full border border-[#161C44] bg-[#0E122E]">
+        <div className="p-2 rounded-full border border-[#161C44] bg-[#0E122E] flex justify-center items-center">
           <PlusIcon
             className="block size-4 shrink-0 text-white translate-y-0.5 transition-transform duration-200 
                        group-data-[state=open]:hidden"

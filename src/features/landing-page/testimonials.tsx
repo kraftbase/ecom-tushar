@@ -12,7 +12,7 @@ function Testimonials() {
 
         <div className="flex flex-col h-full justify-center items-center lg:items-baseline py-10">
           {/* Big quote icon */}
-          <div className="text-5xl md:text-6xl  leading-none">
+          <div className="text-5xl md:text-6xl  leading-none justify-self-start flex justify-start w-full">
             <Image
               src={"/svg/apos.svg"}
               alt="quote"
@@ -28,6 +28,15 @@ function Testimonials() {
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
             vitae erat.
           </blockquote>
+          <div className="text-5xl md:text-6xl relative leading-none justify-self-end flex justify-end w-full">
+            <Image
+              src={"/svg/apos_close.svg"}
+              alt="quote"
+              width={40}
+              height={40}
+              className="w-4 h-fit mt-6"
+            />
+          </div>
 
           <div className="flex  items-center mt-6 bg-[#060925] w-fit p-3.5 rounded-2xl border border-[#131839]">
             <div className="w-12  h-12 rounded-xl overflow-hidden bg-blue-700 flex items-center justify-center">
