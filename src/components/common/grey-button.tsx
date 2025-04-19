@@ -14,7 +14,7 @@ const GreyButton = ({ text, className, href }: GreyButtonProps) => {
     <Link href={href}>
       <Button
         className={cn(
-          "cursor-pointer relative z-10 text-white text-[11px] flex items-center justify-center gap-2 py-[9px] pl-6 pr-6 button-secondary-background",
+          "cursor-pointer relative z-10 text-white text-[11px] flex items-center justify-center gap-2 py-[9px] pl-6 pr-6 button-secondary-background after:absolute after:inset-0 after:border-2 after:border-white/20 after:rounded-[10px]",
           className
         )}
       >

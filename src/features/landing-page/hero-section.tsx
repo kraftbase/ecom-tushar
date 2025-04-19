@@ -101,7 +101,7 @@ const HeroSection = () => {
         </p>
 
         <Link
-          className="cursor-pointer button-secondary-background relative my-10   h-[62px] px-8 font-medium flex justify-center items-center "
+          className="cursor-pointer button-secondary-background relative my-10   h-[62px] px-8 font-medium flex justify-center items-center after:absolute after:inset-0 after:border-2 after:border-white/20 after:rounded-[10px] "
           href={"/#pricing"}
         >
           <Image
