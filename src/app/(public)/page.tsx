@@ -25,6 +25,7 @@ export default function Home() {
         headingClassName="text-center lg:text-left"
         description="Get access to top ecommerce tools & apps, winning products, pre-made landers & creatives."
         bottomSpacing="-bottom-10 md:bottom-6  "
+        descriptionClassName="max-w-[30rem]"
       />
       <FeaturesGrid />
       <FeaturesHeader

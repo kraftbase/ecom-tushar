@@ -55,7 +55,7 @@ function FeaturesGrid() {
               <h3 className="text-lg lg:text-2xl font-bold mb-2">
                 10 Spy Tools Used by the Pros
               </h3>
-              <p className="text-sm lg:text-xl text-white/70 text-center font-normal">
+              <p className="text-sm lg:text-xl text-[#F8F8F8B2]/70 text-center font-normal">
                 Find winning products, analyze top stores, and uncover ad
                 strategies in seconds.
               </p>
@@ -75,11 +75,11 @@ function FeaturesGrid() {
             onMouseEnter={() => handleMouseEnter(lottieRefs.hundredHandpicked)}
             onMouseLeave={() => handleMouseLeave(lottieRefs.hundredHandpicked)}
           >
-            <header className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4">
+            <header className="relative z-40 flex flex-col items-center justify-center gap-4 lg:p-4 lg:px-9">
               <h3 className="text-lg lg:text-2xl font-bold mb-2 text-center">
                 100 Handpicked Winning Products to Make You Win
               </h3>
-              <p className="text-sm lg:text-xl text-white/70 text-center">
+              <p className="text-sm lg:text-xl text-[#F8F8F8B2]/70 text-center">
                 Our experienced team meticulously selects & validates 100
                 winning products every month to ensure your store stays ahead of
                 the competition.
@@ -114,10 +114,13 @@ function FeaturesGrid() {
               Pre-Made Product Pages & <br className="lg:hidden" /> Creatives.{" "}
               <br className="hidden lg:block" /> Launch 10x Faster.
             </h3>
-            <p className="text-sm lg:text-xl text-white/70 text-center lg:leading-9">
-              Get fully optimized product pages, conversion-focused ad
-              creatives, and compelling copy—designed to help you scale faster
-              with ease. No design skills needed, just launch and grow.
+            <p className="text-sm lg:text-xl text-[#F8F8F8B2]/70 text-center lg:leading-9 w-full">
+              Get fully optimized product pages,{" "}
+              <br className="hidden lg:block" /> conversion-focused ad
+              creatives, and <br className="hidden lg:block" /> compelling
+              copy—designed to help you <br className="hidden lg:block" />
+              scale faster with ease. No design skills{" "}
+              <br className="hidden lg:block" /> needed, just launch and grow.
             </p>
           </header>
         </article>
@@ -133,7 +136,7 @@ function FeaturesGrid() {
               <h3 className="text-lg lg:text-xl font-bold mb-2 text-start">
                 Pre-Designed Landing Pages
               </h3>
-              <p className="text-sm lg:text-xl text-white/70 text-center lg:text-left ">
+              <p className="text-sm lg:text-xl text-[#F8F8F8B2]/70 text-center lg:text-left ">
                 No designers needed. Ready-to-use product pages you can just
                 copy, paste, and launch.
               </p>
@@ -160,7 +163,7 @@ function FeaturesGrid() {
               <h3 className="text-lg lg:text-xl font-bold mb-2 ">
                 Handpicked Creatives
               </h3>
-              <p className="text-sm lg:text-xl text-white/70 text-center lg:text-left ">
+              <p className="text-sm lg:text-[21px] text-[#F8F8F8B2]/70 text-center lg:text-left ">
                 Carefully curated top-performing ad creatives, ready for you to
                 launch ads instantly.
               </p>
@@ -183,7 +186,7 @@ function FeaturesGrid() {
               <h3 className="text-lg lg:text-xl font-bold mb-2 ">
                 Launch 10x Faster
               </h3>
-              <p className="text-sm lg:text-xl text-white/70 text-center lg:text-left">
+              <p className="text-sm lg:text-xl text-[#F8F8F8B2]/70 text-center lg:text-left">
                 No more wasted time and ad spend. Launch your next product
                 within minutes, not weeks.
               </p>

@@ -46,7 +46,7 @@ const FeatureCard = ({
           <h3 className="text-xl font-medium mb-2 text-start flex-1 ">
             {title}
           </h3>
-          <div className="px-3.5 py-2 bg-[#0E122E] rounded-[100px]">
+          <div className="px-3.5 py-2 bg-[#0E122E] rounded-[100px] flex">
             <ArrowUpRight color="#C4C8D4" size={18} />
           </div>
         </div>

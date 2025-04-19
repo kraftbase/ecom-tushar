@@ -1,4 +1,5 @@
 import Container from "@/components/common/container";
+import Image from "next/image";
 import React from "react";
 
 interface Tool {
@@ -27,7 +28,13 @@ const ToolRow: React.FC<ToolRowProps> = ({ tool }) => {
         <div className="text-center flex-1 flex justify-center items-center">
           {tool.dropship && (
             <span className=" bg-blue-500 text-white size-5 flex justify-center items-center rounded-full p-1">
-              ✓
+              <Image
+                src="/assets/features/tick.png"
+                alt="check"
+                width={40}
+                height={40}
+                className=" w-[12px] h-fit object-contain"
+              />
             </span>
           )}
         </div>
