@@ -3,13 +3,14 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const featureCardClassName =
-  "rounded-2xl p-2 flex-1 relative border-2 border-[#0C0F26] bg-[linear-gradient(180deg,_rgba(0,_2,_15,_0.00)_0%,_#00041F_100%)]";
+  "rounded-2xl p-2 flex-1 relative  bg-[linear-gradient(180deg,_rgba(0,_2,_15,_0.00)_0%,_#00041F_100%)] overflow-y-visible";
 
 interface FeatureCardProps {
   title: string;
   description: string;
   className?: string;
   src: string;
+  regular?: boolean;
 }
 
 const FeatureCard = ({
@@ -17,9 +18,28 @@ const FeatureCard = ({
   description,
   className,
   src,
+  regular,
 }: FeatureCardProps) => {
   return (
-    <article className={className}>
+    <article
+      className={`${className} ${!regular && "border-2 border-[#0C0F26]"}`}
+    >
+      {regular && (
+        <>
+          <div
+            className="absolute  bg-[#00041F]  h-full w-full z-10 -top-1 left-[2px] rounded-2xl "
+            aria-hidden
+          />
+          <div
+            className="absolute   bg-[linear-gradient(180deg,_#3363FF_0%,_#00031B_84%)] h-full w-[calc(100%+4px)] -z-10 -top-6  left-0 rounded-2xl flex justify-center items-start text-sm"
+            aria-hidden
+          >
+            <h1>Regular membership: ₹20,000/mo</h1>
+          </div>
+        </>
+      )}
+
+      <div className="absolute pt-4 w-full h-full"></div>
       <div className="relative z-30 flex flex-col items-start justify-start gap-4 p-4 lg:p-8 ">
         <div className="flex w-full justify-between items-center gap-4">
           <Image src={src} alt="bolt" width={40} height={40} />
@@ -49,6 +69,7 @@ const PowerfulTools = () => {
           description="Discover top-performing TikTok ads and winning dropshipping products."
           className={featureCardClassName}
           src="/assets/features/7.png"
+          regular={true}
         />
         <FeatureCard
           title="Adnosaur"
