@@ -72,7 +72,20 @@ const HeroSection = () => {
             <span className="background-gradient-text-parent">
               {/* <span className="background-gradient-text">Relying on Luck.</span> */}
               <Typewriter
-                text={["Relying on Luck.", "Relying on Luck."]}
+                text={[
+                  "Relying on Luck.",
+                  "Constant Guesswork",
+                  "Trial & Error",
+                  "Expensive Ad Mistakes",
+                  "Frustrating Research",
+                  "Unpredictable Results",
+                  "Wasting Money",
+                  "Blind Testing",
+                  "Burning Cash",
+                  "Trend Chasing",
+                  "Copy-Paste Tactics",
+                  "Trend FOMO",
+                ]}
                 speed={70}
                 className="background-gradient-text"
                 waitTime={1500}

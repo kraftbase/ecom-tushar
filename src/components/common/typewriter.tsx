@@ -111,7 +111,7 @@ const Typewriter = ({
 
   return (
     <div className={`inline whitespace-pre-wrap tracking-tight ${className}`}>
-      <span>{displayText}</span>
+      <span className="text-nowrap">{displayText}</span>
       {showCursor && (
         <motion.span
           variants={cursorAnimationVariants}
