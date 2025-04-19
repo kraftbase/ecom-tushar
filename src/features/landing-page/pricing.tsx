@@ -77,14 +77,16 @@ function Pricing() {
           </div>
 
           {/* Price Row: original (strikethrough) + main price + discount label */}
-          <div className="flex flex-col  items-start justify-center  mb-6 ">
+          <div className="flex flex-col  items-start justify-center  mb-6 font-satoshi">
             {/* Strikethrough price */}
             <span className="line-through text-[#686773]  text-[18px] font-normal">
               {originalPrice}
             </span>
             {/* New price */}
             <div className="flex gap-3">
-              <span className="text-4xl font-bold">{price}</span>
+              <span className={`text-4xl font-bold ${tomatoGrotesk.className}`}>
+                {price}
+              </span>
               {/* Discount label (optional) */}
               {discountLabel && (
                 <span className="text-[15px] font-medium px-3 py-1.5 rounded-full bg-[#0E122E] text-[#CCD7FF] flex justify-center items-center border border-[#161C44]">
@@ -95,7 +97,7 @@ function Pricing() {
           </div>
 
           {/* "What's included?" heading */}
-          <h4 className="text-sm text-[#CAC9D1] font-semibold mb-3 border-t-[1px] border-[#97A2C2]/30 pt-6">
+          <h4 className="text-sm text-[#CAC9D1] font-semibold mb-3 border-t-[1px] border-[#161C44] group-hover:border-[#97A2C2] pt-6 transition-colors duration-300">
             What's included:
           </h4>
 
@@ -107,7 +109,14 @@ function Pricing() {
                 className="flex items-center gap-4 text-[#C4C8D4]"
               >
                 <span className="flex justify-center items-center rounded-full w-5 h-5 text-[#CCD7FF] bg-[#3363FF]">
-                  <Check size={14} strokeWidth={2} />
+                  {/* <Check size={14} strokeWidth={2} /> */}
+                  <Image
+                    src="/svg/check.svg"
+                    alt="check"
+                    width={40}
+                    height={40}
+                    className=" w-2 h-fit object-contain"
+                  />
                 </span>
 
                 <span className="leading-tight font-medium">{feature}</span>

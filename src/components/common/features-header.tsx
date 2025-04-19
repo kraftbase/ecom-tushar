@@ -26,6 +26,7 @@ interface FeaturesHeaderProps {
   className?: string;
   headingClassName?: string;
   bottomSpacing?: string;
+  descriptionClassName?: string;
 }
 
 const FeaturesHeader = ({
@@ -38,6 +39,7 @@ const FeaturesHeader = ({
   className,
   headingClassName,
   bottomSpacing,
+  descriptionClassName,
 }: FeaturesHeaderProps) => {
   return (
     <section className="container-main w-screen lg:w-full mx-auto px-3 md:px-8 xl:px-18 max-w-[95rem] relative lg:pt-20 pb-10 mb-10 lg:mb-0 overflow-x-clip">
@@ -88,7 +90,7 @@ const FeaturesHeader = ({
             />
             <h1
               className={cn(
-                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-7 text-[#959EFE] font-satoshi text-sm lg:text-base font-normal leading-6 relative",
+                "rounded-[100px] border-[#959EFE]/60 border-[0.2px] py-1 px-6 text-[#959EFE] font-satoshi text-sm lg:text-base font-normal leading-6 relative",
                 title.className
               )}
             >
@@ -127,7 +129,7 @@ const FeaturesHeader = ({
           >
             {heading}
           </h1>
-          <h1 className="text-center text-[#CAC9D1]/70 text-base lg:text-lg font-normal max-w-lg">
+          <h1 className={cn("text-center text-[#CAC9D1]/80 text-base font-satoshi lg:text-lg font-normal max-w-lg", descriptionClassName)}>
             {description}
           </h1>
         </div>
